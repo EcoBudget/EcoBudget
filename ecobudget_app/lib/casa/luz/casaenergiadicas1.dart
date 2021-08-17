@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
 class casaenergiadicas1 extends StatelessWidget {
-  casaenergiadicas1({
-    Key key,
-  }) : super(key: key);
+  //casaenergiadicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

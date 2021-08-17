@@ -3,9 +3,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class escolarorganicosdicas1 extends StatelessWidget {
-  escolarorganicosdicas1({
-    Key key,
-  }) : super(key: key);
+  //escolarorganicosdicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import '../../geralrinorgnicosdicas1.dart';
 import 'package:adobe_xd/page_link.dart';
 import '../escola.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'geralrinorgnicosdicas1.dart';
+
 class escolarinoranicos extends StatelessWidget {
-  escolarinoranicos({
-    Key key,
-  }) : super(key: key);
+  //escolarinoranicos({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

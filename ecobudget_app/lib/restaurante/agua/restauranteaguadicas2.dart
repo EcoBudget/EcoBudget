@@ -1,14 +1,12 @@
+import 'package:ecobudget_app/restaurante/agua/restauranteagua.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'restaurante/agua/restauranteagua.dart';
 import 'package:adobe_xd/page_link.dart';
 import './restauranteaguadicas1.dart';
 
 class restauranteaguadicas2 extends StatelessWidget {
-  restauranteaguadicas2({
-    Key key,
-  }) : super(key: key);
+  //restauranteaguadicas2({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

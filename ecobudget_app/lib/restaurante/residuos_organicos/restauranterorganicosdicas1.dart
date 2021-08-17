@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'restaurante/residuos_organicos/restauranterorganicos.dart';
 import 'package:adobe_xd/page_link.dart';
 import './restauranterorganicosdicas2.dart';
+import 'restauranterorganicos.dart';
 
 class restauranterorganicosdicas1 extends StatelessWidget {
-  restauranterorganicosdicas1({
-    Key key,
-  }) : super(key: key);
+  //restauranterorganicosdicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

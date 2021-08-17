@@ -5,9 +5,7 @@ import '../../menu/home.dart';
 import 'package:adobe_xd/page_link.dart';
 
 class geralrinorgnicosdicas2 extends StatelessWidget {
-  geralrinorgnicosdicas2({
-    Key key,
-  }) : super(key: key);
+  //geralrinorgnicosdicas2({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

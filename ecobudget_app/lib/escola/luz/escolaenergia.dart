@@ -6,9 +6,7 @@ import '../escola.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class escolaenergia extends StatelessWidget {
-  escolaenergia({
-    Key key,
-  }) : super(key: key);
+  //escolaenergia({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

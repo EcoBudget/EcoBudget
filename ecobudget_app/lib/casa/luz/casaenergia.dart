@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import '../../casaenergiadicas1.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../casa.dart';
+import 'casaenergiadicas1.dart';
 
 class casaenergia extends StatelessWidget {
-  casaenergia({
-    Key key,
-  }) : super(key: key);
+  //casaenergia({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,13 +1,11 @@
+import 'package:ecobudget_app/menu/home.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import './home.dart';
 import 'package:adobe_xd/page_link.dart';
 
 class geralrinorgnicosdicas1 extends StatelessWidget {
-  geralrinorgnicosdicas1({
-    Key key,
-  }) : super(key: key);
+  //geralrinorgnicosdicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,12 +3,10 @@ import 'package:adobe_xd/pinned.dart';
 import './restauranteenergiadicas2.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'restaurante/luz/restauranteenergia.dart';
+import 'restauranteenergia.dart';
 
 class restauranteenergiadicas1 extends StatelessWidget {
-  restauranteenergiadicas1({
-    Key key,
-  }) : super(key: key);
+  //restauranteenergiadicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

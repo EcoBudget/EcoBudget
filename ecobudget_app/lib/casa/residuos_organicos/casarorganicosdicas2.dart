@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
 class casarorganicosdicas2 extends StatelessWidget {
-  casarorganicosdicas2({
-    Key key,
-  }) : super(key: key);
+  //casarorganicosdicas2({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

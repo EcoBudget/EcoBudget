@@ -1,14 +1,12 @@
+import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas1.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import '../../geralrinorgnicosdicas1.dart';
 import 'package:adobe_xd/page_link.dart';
 import '../restaurante.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class restauranterinorgnicos extends StatelessWidget {
-  restauranterinorgnicos({
-    Key key,
-  }) : super(key: key);
+  //restauranterinorgnicos({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

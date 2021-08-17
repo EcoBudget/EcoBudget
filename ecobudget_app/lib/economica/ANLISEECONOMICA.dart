@@ -3,13 +3,11 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../menu/home.dart';
 import 'package:adobe_xd/page_link.dart';
-import '../AEGUA.dart';
-import '../AEENERGIA.dart';
+import 'AEENERGIA.dart';
+import 'AEGUA.dart';
 
 class ANLISEECONOMICA extends StatelessWidget {
-  ANLISEECONOMICA({
-    Key key,
-  }) : super(key: key);
+  //ANLISEECONOMICA({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

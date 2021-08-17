@@ -4,9 +4,7 @@ import 'economica/ANLISEECONOMICA.dart';
 import 'package:adobe_xd/page_link.dart';
 
 class Componente1213 extends StatelessWidget {
-  Componente1213({
-    Key key,
-  }) : super(key: key);
+  //Componente1213({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Stack(

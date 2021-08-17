@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import './casarorganicosdicas2.dart';
 import 'package:adobe_xd/page_link.dart';
-import 'casa/residuos_organicos/casarorganicos.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class casarorganicosdicas1 extends StatelessWidget {
-  casarorganicosdicas1({
-    Key key,
-  }) : super(key: key);
+  //casarorganicosdicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

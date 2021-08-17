@@ -5,9 +5,7 @@ import 'package:adobe_xd/page_link.dart';
 import '../infos/sobreInovaMaua.dart';
 
 class home extends StatelessWidget {
-  home({
-    Key key,
-  }) : super(key: key);
+  //home({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

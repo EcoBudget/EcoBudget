@@ -7,9 +7,7 @@ import '../economica/ANLISEECONOMICA.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class casa extends StatelessWidget {
-  casa({
-    Key key,
-  }) : super(key: key);
+  //casa({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +78,7 @@ class casa extends StatelessWidget {
                             Pin(size: 44.0, start: 8.0),
                             Pin(size: 24.0, end: 5.0),
                             child: Text(
-                              text,
+                              text!,
                               style: TextStyle(
                                 fontFamily: 'Segoe UI',
                                 fontSize: 18,

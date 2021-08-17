@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'economica/ANLISEECONOMICA.dart';
+import 'ANLISEECONOMICA.dart';
 import 'package:adobe_xd/page_link.dart';
 
 class AEGUA extends StatelessWidget {
-  AEGUA({
-    Key key,
-  }) : super(key: key);
+  //AEGUA({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

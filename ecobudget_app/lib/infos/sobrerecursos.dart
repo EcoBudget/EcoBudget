@@ -4,9 +4,7 @@ import '../menu/home.dart';
 import 'package:adobe_xd/page_link.dart';
 
 class sobrerecursos extends StatelessWidget {
-  sobrerecursos({
-    Key key,
-  }) : super(key: key);
+  //sobrerecursos({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

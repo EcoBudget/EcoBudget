@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import '../../restauranteenergiadicas1.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'restauranteenergia.dart';
+import 'restauranteenergiadicas1.dart';
 
 class restauranteenergiadicas2 extends StatelessWidget {
-  restauranteenergiadicas2({
-    Key key,
-  }) : super(key: key);
+  //restauranteenergiadicas2({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
