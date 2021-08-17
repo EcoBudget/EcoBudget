@@ -8,10 +8,12 @@ class home extends StatelessWidget {
   //home({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      home: Scaffold(
       backgroundColor: const Color(0xffd7eaf9),
       body: Stack(
         children: <Widget>[
+          Image(image: const AssetImage('assets/images/ecobudget_icone.png')),
           Pinned.fromPins(
             Pin(start: 71.0, end: 71.0),
             Pin(size: 247.0, middle: 0.5926),
@@ -59,8 +61,8 @@ class home extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 82.0, middle: 0.4245),
-            Pin(size: 27.0, middle: 0.4434),
+            Pin(size: 82.0, middle: 0.4450),
+            Pin(size: 27.0, middle: 0.4250),
             child: Text(
               '      CASA',
               style: TextStyle(
@@ -68,7 +70,7 @@ class home extends StatelessWidget {
                 fontSize: 20,
                 color: const Color(0xfffbe9ff),
               ),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             ),
           ),
           Pinned.fromPins(
@@ -78,28 +80,28 @@ class home extends StatelessWidget {
               'RESTAURANTE',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 22,
+                fontSize: 20,
                 color: const Color(0xfffbe9ff),
               ),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             ),
           ),
           Pinned.fromPins(
             Pin(size: 78.0, middle: 0.4894),
-            Pin(size: 30.0, middle: 0.674),
+            Pin(size: 30.0, middle: 0.6870),
             child: Text(
               'ESCOLA',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 22,
+                fontSize: 20,
                 color: const Color(0xfffbe9ff),
               ),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             ),
           ),
           Container(),
           Pinned.fromPins(
-            Pin(size: 127.0, middle: 0.5021),
+            Pin(size: 127.0, middle: 0.6),
             Pin(size: 70.0, end: 66.0),
             child:
                 // Adobe XD layer: 'INOVA MAUA' (shape)
@@ -115,22 +117,17 @@ class home extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: const AssetImage(''),
+                    image: const AssetImage('assets/images/inova_icone.png'),
                     fit: BoxFit.fill,
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xff66456b),
-                      offset: Offset(0, 3),
-                      blurRadius: 6,
-                    ),
-                  ],
+
                 ),
               ),
             ),
           ),
         ],
       ),
+    )
     );
   }
 }
