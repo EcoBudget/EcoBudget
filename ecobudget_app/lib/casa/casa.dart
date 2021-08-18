@@ -61,7 +61,7 @@ class casa extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6.0),
                                   image: DecorationImage(
-                                    image: const AssetImage(''),
+                                    image: const AssetImage('assets/images/agua_imagem.jpg'),
                                     fit: BoxFit.cover,
                                     colorFilter: new ColorFilter.mode(
                                         Colors.black.withOpacity(0.6),

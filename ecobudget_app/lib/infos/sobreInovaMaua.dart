@@ -9,9 +9,15 @@ class sobreInovaMaua extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Inova > Junior'),
+          backgroundColor: Color(0xff1c3649),
+
+        ),
 
         backgroundColor: const Color(0xffd7eaf9),
         body: ListView(
+
           children: <Widget>[
             Text(
               'O que é o InovaMauá?',
