@@ -10,7 +10,7 @@ class sobreInovaMaua extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Inova > Junior'),
+          leading: BackButton(onPressed: (){Navigator.pop(context);},),
           backgroundColor: Color(0xff1c3649),
 
         ),

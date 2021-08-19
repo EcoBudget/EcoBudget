@@ -11,6 +11,11 @@ class casa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff236068),
+        title: Text("EcoBudget"),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+      ),
       backgroundColor: const Color(0xffd7eaf9),
       body: Stack(
         children: <Widget>[
@@ -117,12 +122,12 @@ class casa extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(size: 172.0, middle: 0.5),
-            Pin(size: 30.0, middle: 0.6918),
+            Pin(size: 30.0, middle: 0.6925),
             child: Text(
               'Sobre os recursos',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 22,
+                fontSize: 21,
                 color: const Color(0xfffbe9ff),
               ),
               textAlign: TextAlign.left,
@@ -149,19 +154,7 @@ class casa extends StatelessWidget {
               ),
             ),
           ),
-          Pinned.fromPins(
-            Pin(start: 28.0, end: 28.0),
-            Pin(size: 71.0, end: 96.0),
-            child: Text(
-              'Análise econômica',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 22,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+
           Pinned.fromPins(
             Pin(size: 200.4, start: 33.0),
             Pin(size: 54.6, middle: 0.8214),
@@ -183,8 +176,8 @@ class casa extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(start: 28.0, end: 28.0),
-            Pin(size: 71.0, end: 96.0),
+            Pin(start: 28.0, end: 30.0),
+            Pin(size: 71.0, end: 66.0),
             child: PageLink(
               links: [
                 PageLinkInfo(
@@ -198,7 +191,7 @@ class casa extends StatelessWidget {
                 'Análise econômica',
                 style: TextStyle(
                   fontFamily: 'Segoe UI',
-                  fontSize: 22,
+                  fontSize: 21,
                   color: const Color(0xfffbe9ff),
                 ),
                 textAlign: TextAlign.center,
