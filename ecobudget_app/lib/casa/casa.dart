@@ -177,7 +177,7 @@ class casa extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 28.0, end: 30.0),
-            Pin(size: 71.0, end: 66.0),
+            Pin(size: 71.0, end: 65.0),
             child: PageLink(
               links: [
                 PageLinkInfo(
