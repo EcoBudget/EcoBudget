@@ -56,6 +56,17 @@ flutter:
       - assets/images/inova_icone.png
       - assets/images/ecobudget_icone.png
       - assets/images/agua_imagem.jpg
+      - assets/images/aegua_1.png
+      - assets/images/aegua_2.png
+      - assets/images/aegua_3.png
+      - assets/images/aegua_4.png
+      - assets/images/aegua_5.png
+      - assets/images/aegua_6.png
+      - assets/images/aegua_7.png
+      - assets/images/aegua_8.png
+      - assets/images/aegua_9.png
+      - assets/images/tabela_lampadas.png
+      - assets/images/energia_icone.jpg
 
   #   - images/a_dot_ham.jpeg
 

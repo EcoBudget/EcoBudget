@@ -8,155 +8,77 @@ class AEENERGIA extends StatelessWidget {
   //AEENERGIA({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
-        children: <Widget>[
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 15.6),
-            Pin(size: 16.0, start: 19.0),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  PageLink(
-                links: [
-                  PageLinkInfo(
-                    transition: LinkTransition.Fade,
-                    ease: Curves.easeOut,
-                    duration: 0.3,
-                    pageBuilder: () => ANLISEECONOMICA(),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          leading: BackButton(onPressed: (){Navigator.pop(context);},),
+          centerTitle: true,
+          title: Text("Energia"),
+          backgroundColor: Color(0xff236068),
+        ),
+        backgroundColor: const Color(0xffd7eaf9),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView(
+            children: <Widget>[
+              Text(
+                'Lâmpadas\n',
+                style: TextStyle(
+                  fontFamily: 'Segoe UI',
+                  fontSize: 17,
+                  color: const Color(0xff000000),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+              Image(image: const AssetImage("assets/images/tabela_lampadas.png")),
+              SizedBox(height: 30,),
+              Text(
+                'Ar-condicionado\n',
+                style: TextStyle(
+                  fontFamily: 'Segoe UI',
+                  fontSize: 17,
+                  color: const Color(0xff000000),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                'Os aparelhos de ar-condicionado, pelo fato de ficarem muito tempo ligados, podem aumentar a conta de luz em até 50%. Estima-se que ao manter o ar ligado 4 horas por dia, este ao fim do mês é responsável por 63% do consumo mensal de eletricidade.  Visando a redução desse custo, há uma tecnologia chamada "inverter" que diminui o consumo do ar-condicionado. Esta nova função, apesar de ser mais cara, diminui o consumo do ar em até 40% sendo assim um ótimo investimento a longo prazo.\n',
+                style: TextStyle(
+                  fontFamily: 'Segoe UI',
+                  fontSize: 15,
+                  color: const Color(0xff000000),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                'Energia solar\n',
+                style: TextStyle(
+                  fontFamily: 'Segoe UI',
+                  fontSize: 17,
+                  color: const Color(0xff000000),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+
+               Text(
+                  'A energia solar é uma opção de fonte energética sustentável e limpa, que serve de alternativa às usinas que produzem energia a partir da queima de combustíveis fósseis, as quais são grandes responsáveis pela poluição do planeta e emissão de gases estufa. Além disso, exigem manutenção mínima, possuem vida útil de 30 a 40 anos e não emitem sons, porém seu lado negativo é o alto custo de instalação, chegando a 65 mil reais para escolas.',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xff000000),
                   ),
-                ],
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromPins(
-                      Pin(start: 0.0, end: 0.0),
-                      Pin(start: 0.0, end: 0.0),
-                      child:
-                          // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                          Scrollbar(
-                        child: SingleChildScrollView(
-                          child: Wrap(
-                            alignment: WrapAlignment.center,
-                            spacing: 20,
-                            runSpacing: 20,
-                            children: [{}].map((itemData) {
-                              return SizedBox(
-                                width: 16.0,
-                                height: 16.0,
-                                child:
-                                    // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                    Stack(
-                                  children: <Widget>[
-                                    Pinned.fromPins(
-                                      Pin(start: 0.0, end: 0.0),
-                                      Pin(start: 0.0, end: 0.0),
-                                      child:
-                                          // Adobe XD layer: 'Path 10' (shape)
-                                          SvgPicture.string(
-                                        _svg_ru0g9a,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ),
+
+
+            ],
           ),
-          Pinned.fromPins(
-            Pin(size: 80.0, middle: 0.5),
-            Pin(size: 22.0, start: 158.0),
-            child: Text(
-              'Lâmpadas',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff000000),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 132.0, middle: 0.5),
-            Pin(size: 22.0, middle: 0.4009),
-            child: Text(
-              'Ar-condicionado',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff000000),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 104.0, middle: 0.5),
-            Pin(size: 22.0, middle: 0.7204),
-            child: Text(
-              'Energia solar',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff000000),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 56.0, end: 55.0),
-            Pin(size: 300.0, middle: 0.5829),
-            child: Text(
-              'Os aparelhos de ar-condicionado, pelo fato de ficarem muito tempo ligados, podem aumentar a conta de luz em até 50%. Estima-se que ao manter o ar ligado 4 horas por dia, este ao fim do mês é responsável por 63% do consumo mensal de eletricidade.  Visando a redução desse custo, há uma tecnologia chamada "inverter" que diminui o consumo do ar-condicionado. Esta nova função, apesar de ser mais cara, diminui o consumo do ar em até 40% sendo assim um ótimo investimento a longo prazo.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff000000),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 45.0, end: 44.0),
-            Pin(size: 245.0, end: 61.0),
-            child: Text(
-              'A energia solar é uma opção de fonte energética sustentável e limpa, que serve de alternativa às usinas que produzem energia a partir da queima de combustíveis fósseis, as quais são grandes responsáveis pela poluição do planeta e emissão de gases estufa. Além disso, exigem manutenção mínima, possuem vida útil de 30 a 40 anos e não emitem sons, porém seu lado negativo é o alto custo de instalação, chegando a 65 mil reais para escolas.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff000000),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 20.0, end: 19.0),
-            Pin(size: 287.0, middle: 0.1904),
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage(''),
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

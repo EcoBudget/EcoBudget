@@ -11,95 +11,22 @@ class ANLISEECONOMICA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Análises Econômicas"),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+        backgroundColor: Color(0xff236068),
+      ),
       backgroundColor: const Color(0xffd7eaf9),
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(start: 0.0, end: -1.0),
-            Pin(size: 164.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xff236068),
-                      border: Border.all(
-                          width: 1.0, color: const Color(0xff8b9190)),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+              Pin(size: 10,middle:0.41 ),
+              Pin(size: 10,middle: 0.05),
+              child: Icon(Icons.monetization_on_rounded,color: Colors.green[800],size: 75,),),
           Pinned.fromPins(
-            Pin(size: 16.0, start: 15.6),
-            Pin(size: 16.0, start: 19.0),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  PageLink(
-                links: [
-                  PageLinkInfo(
-                    transition: LinkTransition.Fade,
-                    ease: Curves.easeOut,
-                    duration: 0.3,
-                    pageBuilder: () => home(),
-                  ),
-                ],
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromPins(
-                      Pin(start: 0.0, end: 0.0),
-                      Pin(start: 0.0, end: 0.0),
-                      child:
-                          // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                          Scrollbar(
-                        child: SingleChildScrollView(
-                          child: Wrap(
-                            alignment: WrapAlignment.center,
-                            spacing: 20,
-                            runSpacing: 20,
-                            children: [{}].map((itemData) {
-                              return SizedBox(
-                                width: 16.0,
-                                height: 16.0,
-                                child:
-                                    // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                    Stack(
-                                  children: <Widget>[
-                                    Pinned.fromPins(
-                                      Pin(start: 0.0, end: 0.0),
-                                      Pin(start: 0.0, end: 0.0),
-                                      child:
-                                          // Adobe XD layer: 'Path 10' (shape)
-                                          SvgPicture.string(
-                                        _svg_ru0g9a,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 201.0, middle: 0.5346),
-            Pin(size: 129.0, middle: 0.4326),
+            Pin(size: 300.0, middle: 0.5346),
+            Pin(size: 129.0, middle: 0.3326),
             child:
                 // Adobe XD layer: 'AGUA' (shape)
                 PageLink(
@@ -115,7 +42,7 @@ class ANLISEECONOMICA extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6.0),
                   image: DecorationImage(
-                    image: const AssetImage(''),
+                    image: const AssetImage('assets/images/agua_imagem.jpg'),
                     fit: BoxFit.cover,
                     colorFilter: new ColorFilter.mode(
                         Colors.black.withOpacity(0.6), BlendMode.dstIn),
@@ -127,8 +54,8 @@ class ANLISEECONOMICA extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 44.0, middle: 0.2785),
-            Pin(size: 24.0, middle: 0.5136),
+            Pin(size: 44.0, middle: 0.25),
+            Pin(size: 24.0, middle: 0.43),
             child: Text(
               'Água',
               style: TextStyle(
@@ -141,8 +68,8 @@ class ANLISEECONOMICA extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(start: 81.0, end: 80.0),
-            Pin(size: 116.0, middle: 0.705),
+            Pin(size:300, middle: 0.5346),
+            Pin(size: 129.0, middle: 0.705),
             child:
                 // Adobe XD layer: 'AGUA' (shape)
                 PageLink(
@@ -158,7 +85,7 @@ class ANLISEECONOMICA extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6.0),
                   image: DecorationImage(
-                    image: const AssetImage(''),
+                    image: const AssetImage('assets/images/energia_icone.jpg'),
                     fit: BoxFit.cover,
                     colorFilter: new ColorFilter.mode(
                         Colors.black.withOpacity(0.6), BlendMode.dstIn),
@@ -183,6 +110,13 @@ class ANLISEECONOMICA extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
+          Pinned.fromPins(
+            Pin(size: 100, middle: 0.56),
+            Pin(size: 90, middle: 0.95),
+            child: Image(
+              image: AssetImage("assets/images/inova_icone.png"),
+            ),
+          )
         ],
       ),
     );
