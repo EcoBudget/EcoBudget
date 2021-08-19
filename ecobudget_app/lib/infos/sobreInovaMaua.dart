@@ -10,8 +10,9 @@ class sobreInovaMaua extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          leading: BackButton(onPressed: (){Navigator.pop(context);},),
-          backgroundColor: Color(0xff1c3649),
+
+          leading: BackButton(onPressed: (){Navigator.pop(context);},color: Colors.black54,),
+          backgroundColor: Color(0xffd7eaf9),
 
         ),
 
