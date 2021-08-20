@@ -11,7 +11,8 @@ class sobrerecursos extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff236068),
-          title: Text("EcoBudget"),
+          title: Text("Recursos"),
+          centerTitle: true,
           leading: BackButton(onPressed: (){Navigator.pop(context);},),
         ),
         backgroundColor: const Color(0xffd7eaf9),

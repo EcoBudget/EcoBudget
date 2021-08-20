@@ -10,52 +10,21 @@ class casaagua extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Água"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: Column(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: -3.0, end: -3.0),
-            Pin(start: 80.0, end: 0.0),
-            child:
                 // Adobe XD layer: 'Posts' (group)
-                Stack(
+                Column(
               children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 3.0),
-                  Pin(size: 465.8, start: 0.0),
-                  child:
                       // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 234.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 143.8, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 234' (shape)
-                            SvgPicture.string(
-                          _svg_o63oq5,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 136.0, start: 115.0),
-                        Pin(size: 22.0, start: 29.0),
-                        child:
-                            // Adobe XD layer: 'CATEGORY' (text)
                             Text(
-                          'INTRODUÇÃO',
+                          '\nINTRODUÇÃO\n',
                           style: TextStyle(
                             fontFamily: 'Arial',
                             fontSize: 20,
@@ -67,54 +36,52 @@ class casaagua extends StatelessWidget {
                               applyHeightToFirstAscent: false),
                           textAlign: TextAlign.left,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 2.0, end: 0.0),
-                  Pin(size: 204.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 1.0, end: 0.0),
-                        Pin(size: 160.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Container(),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 226.0, middle: 0.4929),
-                  Pin(size: 57.0, middle: 0.7116),
+
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
                   child: Text(
+                    'O consumo diário de água feito por uma pessoa, de acordo com a ONU, ultrapassa em 50 litros o necessário para se ter uma vida saudável. Dito isso, há inúmeras medidas simples que podem ser tomadas e aplicadas nas próprias residências de cada indivíduo que contribuem para um consumo consciente, que proporciona não só uma melhor qualidade de vida à população como também benefícios financeiros e ambientais.\n',
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 17,
+                      color: const Color(0xff1c3649),
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+
+                Container(
+
+                  decoration: BoxDecoration(
+                    color: Color(0xff236068),
+                  ),
+                  child: Text(
+                    '\nVocê sabia que a Sabesp tem como meta reduzir em 30% o consumo de água pelos moradores abastecidos pela região da Cantareira, sendo consumidos 128 litros por morador a cada dia ao invés de 161 litros?\n',
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 15,
+                      color: const Color(0xfff9f9f9),
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+
+                 SizedBox(height: 55.0,),
+                 Text(
                     'Como reduzir\n               esse uso?',
                     style: TextStyle(
                       fontFamily: 'Arial',
-                      fontSize: 25,
+                      fontSize: 30,
                       color: const Color(0xff1c3649),
                       fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.left,
                   ),
-                ),
+
               ],
             ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.815),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
                 PageLink(
               links: [
                 PageLinkInfo(
@@ -130,92 +97,7 @@ class casaagua extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 15.0, end: 14.0),
-            Pin(size: 264.0, middle: 0.2496),
-            child: Text(
-              'O consumo diário de água feito por uma pessoa, de acordo com a ONU, ultrapassa em 50 litros o necessário para se ter uma vida saudável. Dito isso, há inúmeras medidas simples que podem ser tomadas e aplicadas nas próprias residências de cada indivíduo que contribuem para um consumo consciente, que proporciona não só uma melhor qualidade de vida à população como também benefícios financeiros e ambientais.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 151.0, start: -120.0),
-            Pin(size: 33.0, middle: 0.7042),
-            child: Text(
-              '',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff000000),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -3.0),
-            Pin(size: 79.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 81.0, middle: 0.4946),
-            Pin(size: 47.0, start: 14.0),
-            child: Text(
-              'Água',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 25.0, end: 24.0),
-            Pin(size: 148.0, middle: 0.6075),
-            child: Text(
-              'Você sabia que a Sabesp tem como meta reduzir em 30% o consumo de água pelos moradores abastecidos pela região da Cantareira, sendo consumidos 128 litros por morador a cada dia ao invés de 161 litros.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xfff9f9f9),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+
         ],
       ),
     );

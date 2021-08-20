@@ -1,3 +1,4 @@
+import 'package:ecobudget_app/casa/agua/casaagua.dart';
 import 'package:ecobudget_app/casa/casa.dart';
 import 'package:ecobudget_app/economica/AEENERGIA.dart';
 import 'package:ecobudget_app/economica/AEGUA.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ANLISEECONOMICA(),
+      home: home(),
     );
   }
 }
