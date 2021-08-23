@@ -24,7 +24,7 @@ class casaagua extends StatelessWidget {
               children: <Widget>[
                       // Adobe XD layer: 'Posts' (group)
                             Text(
-                          '\nINTRODUÇÃO\n',
+                          '\nINTRODUÇÃO',
                           style: TextStyle(
                             fontFamily: 'Arial',
                             fontSize: 20,
