@@ -1,5 +1,7 @@
 import 'package:ecobudget_app/casa/agua/casaagua.dart';
 import 'package:ecobudget_app/casa/casa.dart';
+import 'package:ecobudget_app/casa/luz/casaenergia.dart';
+import 'package:ecobudget_app/casa/luz/casaenergiadicas2.dart';
 import 'package:ecobudget_app/economica/AEENERGIA.dart';
 import 'package:ecobudget_app/economica/AEGUA.dart';
 import 'package:ecobudget_app/economica/ANLISEECONOMICA.dart';

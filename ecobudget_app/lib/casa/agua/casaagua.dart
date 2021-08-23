@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -14,90 +16,75 @@ class casaagua extends StatelessWidget {
         title: Text("Água"),
         centerTitle: true,
         backgroundColor: Color(0xff236068),
-        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       backgroundColor: const Color(0xffd7eaf9),
       body: Column(
         children: <Widget>[
-                // Adobe XD layer: 'Posts' (group)
-                Column(
-              children: <Widget>[
-                      // Adobe XD layer: 'Posts' (group)
-                            Text(
-                          '\nINTRODUÇÃO',
-                          style: TextStyle(
-                            fontFamily: 'Arial',
-                            fontSize: 20,
-                            color: const Color(0xff1c3649),
-                            fontWeight: FontWeight.w700,
-                            height: 1.5,
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.left,
-                        ),
+          // Adobe XD layer: 'Posts' (group)
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
 
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Text(
-                    'O consumo diário de água feito por uma pessoa, de acordo com a ONU, ultrapassa em 50 litros o necessário para se ter uma vida saudável. Dito isso, há inúmeras medidas simples que podem ser tomadas e aplicadas nas próprias residências de cada indivíduo que contribuem para um consumo consciente, que proporciona não só uma melhor qualidade de vida à população como também benefícios financeiros e ambientais.\n',
-                    style: TextStyle(
-                      fontFamily: 'Segoe UI',
-                      fontSize: 17,
-                      color: const Color(0xff1c3649),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+              tituloformatado(20, '\nINTRODUÇÃO', 'Arial'),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'O consumo diário de água feito por uma pessoa, de acordo com a ONU, ultrapassa em 50 litros o necessário para se ter uma vida saudável. Dito isso, há inúmeras medidas simples que podem ser tomadas e aplicadas nas próprias residências de cada indivíduo que contribuem para um consumo consciente, que proporciona não só uma melhor qualidade de vida à população como também benefícios financeiros e ambientais.\n'),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-
-                Container(
-
-                  decoration: BoxDecoration(
-                    color: Color(0xff236068),
+                child: Text(
+                  '\nVocê sabia que a Sabesp tem como meta reduzir em 30% o consumo de água pelos moradores abastecidos pela região da Cantareira, sendo consumidos 128 litros por morador a cada dia ao invés de 161 litros?\n',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xfff9f9f9),
                   ),
-                  child: Text(
-                    '\nVocê sabia que a Sabesp tem como meta reduzir em 30% o consumo de água pelos moradores abastecidos pela região da Cantareira, sendo consumidos 128 litros por morador a cada dia ao invés de 161 litros?\n',
-                    style: TextStyle(
-                      fontFamily: 'Segoe UI',
-                      fontSize: 15,
-                      color: const Color(0xfff9f9f9),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+                  textAlign: TextAlign.center,
                 ),
+              ),
 
-                 SizedBox(height: 55.0,),
-                 Text(
-                    'Como reduzir\n               esse uso?',
-                    style: TextStyle(
-                      fontFamily: 'Arial',
-                      fontSize: 30,
-                      color: const Color(0xff1c3649),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-
-              ],
-            ),
+              SizedBox(
+                height: 55.0,
+              ),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
 
           // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => casaaguadicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_l1puj,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => casaaguadicas1(),
               ),
+            ],
+            child: SvgPicture.string(
+              _svg_l1puj,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
-
+          ),
         ],
       ),
     );
