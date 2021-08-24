@@ -1,3 +1,7 @@
+import 'package:ecobudget_app/escola/agua/escolagua.dart';
+import 'package:ecobudget_app/escola/agua/escolaguadicas2.dart';
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
@@ -6,80 +10,44 @@ class escolaguadicas1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Novas Atitudes"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return escolaguadicas2();
+              }));
+            },
+            icon: Icon(Icons.arrow_forward),
+            tooltip: 'Mudanças Estruturais',
+          ),
+        ],
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: Column(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(size: 143.0, middle: 0.5023),
-            Pin(size: 26.0, middle: 0.1875),
-            child: Text(
-              'Conscientização',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 54.0, middle: 0.5),
-            Pin(size: 26.0, middle: 0.4707),
-            child: Text(
-              'Reuso',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 50.0, end: 44.0),
-            Pin(size: 120.0, middle: 0.2796),
-            child: Text(
+          tituloformatado(20, '\nConscientização', 'Segoe UI'),
+          bordaamarela(
+              110,
               '\nIncentivar os alunos a utilizar água de \nmaneira consciente fazendo campanhas e colocando cartazes nas áreas mais propensas a desperdício, como o bebedouro.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 50.0, end: 50.0),
-            Pin(size: 120.0, middle: 0.6535),
-            child: Text(
-              'Utilizar um simples cano PVC para que\n a saída de água do bebedouro seja \ndirecionada para um recipiente de \nplástico destinado ao armazenamento, \nvisando o reuso dessa água para a \nlimpeza, em geral, ou para a irrigação.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 47.0, end: 47.0),
-            Pin(size: 100.0, end: 60.0),
-            child: Text(
-              'Reaproveitar a água utilizada e \ndestiná-la para o enxague de pratos \ndo refeitório, irrigação e/ou até \nmesmo para a limpeza do chão da \ncozinha.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+              15),
+          tituloformatado(20, 'Reuso', 'Segoe UI'),
+          bordaamarela(
+              120,
+              '\nUtilizar um simples cano PVC para que a saída de água do bebedouro seja direcionada para um recipiente de plástico destinado ao armazenamento, visando o reuso dessa água para a limpeza, em geral, ou para a irrigação.',
+              15),
+          bordaamarela(
+              100,
+              '\nReaproveitar a água utilizada e destiná-la para o enxague de pratos do refeitório, irrigação e/ou até mesmo para a limpeza do chão da cozinha.',
+              15),
         ],
       ),
     );

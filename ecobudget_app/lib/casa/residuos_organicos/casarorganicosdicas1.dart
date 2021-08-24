@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import './casarorganicosdicas2.dart';
@@ -9,248 +11,59 @@ class casarorganicosdicas1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Novas Atitudes"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return casarorganicosdicas2();
+              }));
+            },
+            icon: Icon(Icons.arrow_forward),
+            tooltip: 'Mudanças Estruturais',
+          ),
+        ],
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 121.0, start: -2.0),
-            child: SvgPicture.string(
-              _svg_exsjms,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 94.0, middle: 0.4624),
-            Pin(size: 42.0, start: 17.0),
-            child: Text(
-              'Dicas',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 35,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 129.0, start: 19.0),
-            Pin(size: 22.0, start: 85.0),
-            child: Text(
-              'Novas atitudes',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 18,
-                color: const Color(0xffebf2f3),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 185.0, end: 5.0),
-            Pin(size: 22.0, start: 85.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => casarorganicosdicas2(),
-                ),
-              ],
-              child: Text(
-                'Mudanças estruturais',
-                style: TextStyle(
-                  fontFamily: 'Century Gothic',
-                  fontSize: 18,
-                  color: const Color(0xffebf2f3),
-                  fontWeight: FontWeight.w700,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 141.0, start: 13.0),
-            Pin(size: 9.0, start: 115.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xffebf2f3),
-              ),
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 41.0, end: 46.0),
-            Pin(size: 60.0, start: 220.0),
-            child: Text(
-              'Na hora de ir ao mercado, compre apenas o que for precisar.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 129.0, middle: 0.5325),
-            Pin(size: 32.0, start: 160.0),
-            child: Text(
-              'No mercado',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 107.0, middle: 0.5296),
-            Pin(size: 35.0, middle: 0.2133),
-            child: Text(
-              'Na cozinha',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 47.0, end: 46.0),
-            Pin(size: 143.0, middle: 0.2698),
-            child: Text(
-              'E na hora de cozinhar, utilize apenas os ingredientes necessários, aproveitando-os ao máximo. Por exemplo, a casca da banana pode ser aproveitada para fazer uma panqueca, ou outras receitas ao invés de ser jogada fora.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 142.0, middle: 0.5),
-            Pin(size: 22.0, middle: 0.3748),
-            child: Text(
-              'Na hora de comer',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 55.0, end: 30.0),
-            Pin(size: 109.0, middle: 0.4317),
-            child: Text(
-              'Quando for comer, pegue menos, e se sentir fome repita. Opte por fazer mais \npratos pequenos, à um prato grande, pois assim as chances de se desperdiçar \ncomida são menores. ',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 53.0, middle: 0.5016),
-            Pin(size: 28.0, middle: 0.7761),
-            child: Text(
-              'Dica',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 31.0, middle: 0.5015),
-            Pin(size: 51.0, middle: 0.8117),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                SvgPicture.string(
-              _svg_fzhk,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 51.0, end: 36.0),
-            Pin(size: 65.0, end: 185.0),
-            child: Text(
-              'Utilize o óleo de fritura que sobrar para fazer sabão caseiro, por exemplo.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 80.0, end: 80.0),
-            Pin(size: 93.0, end: 52.0),
-            child: Text(
-              'Confira clicando aqui os lugares que recebem o óleo perto de você',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 30.0, end: 30.0),
-            Pin(size: 133.0, middle: 0.7211),
-            child: Scrollbar(
-              child: SingleChildScrollView(
-                child: Text(
-                  'Nunca descarte esse resíduo na pia, o \nóleo quando descartado incorretamento pode poluir rios e mares. Guarde em \ngarrafas que seriam descartadas, quando estiverem cheias, leve a um lugar receba \no óleo.\n',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 15,
-                    color: const Color(0xff1c3649),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 70.0, middle: 0.469),
-            Pin(size: 22.0, middle: 0.507),
-            child: Text(
-              'Descarte',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
+          tituloformatado(20, '\nNo mercado', 'Segoe UI'),
+           bordaamarela(80, '\nNa hora de ir ao mercado, compre apenas o que for precisar.', 15),
+
+
+          tituloformatado(20, 'Na cozinha', 'Segoe UI'),
+          bordaamarela(130, '\nE na hora de cozinhar, utilize apenas os ingredientes necessários, aproveitando-os ao máximo. Por exemplo, a casca da banana pode ser aproveitada para fazer uma panqueca, ou outras receitas ao invés de ser jogada fora.\n', 15),
+
+          tituloformatado(20, 'Na hora de comer', 'Segoe UI'),
+          bordaamarela(130, '\nQuando for comer, pegue menos, e se sentir fome repita. Opte por fazer mais \npratos pequenos, à um prato grande, pois assim as chances de se desperdiçar \ncomida são menores. ', 15),
+
+          tituloformatado(20,'Descarte' , 'Segoe UI'),
+          bordaamarela(150,'\nNunca descarte esse resíduo na pia, o \nóleo quando descartado incorretamento pode poluir rios e mares. Guarde em \ngarrafas que seriam descartadas, quando estiverem cheias, leve a um lugar receba \no óleo.\n' , 15),
+
+          tituloformatado(25, 'Dica', 'Arial'),
+          bordaamarela(80, '\nUtilize o óleo de fritura que sobrar para fazer sabão caseiro, por exemplo.\n', 15),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         ],
       ),
     );

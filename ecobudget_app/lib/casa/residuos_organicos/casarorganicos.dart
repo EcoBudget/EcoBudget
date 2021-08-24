@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -12,209 +14,74 @@ class casarorganicos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Resíduos Orgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -3.0),
-            Pin(start: 275.0, end: -27.0),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 6.0, end: 0.0),
-                  Pin(size: 217.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 414.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 160.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 120.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Container(),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 226.0, middle: 0.4891),
-                  Pin(size: 57.0, middle: 0.532),
-                  child: Text(
-                    'Como reduzir\n               esse uso?',
-                    style: TextStyle(
-                      fontFamily: 'Arial',
-                      fontSize: 25,
-                      color: const Color(0xff1c3649),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 44.0, middle: 0.5),
-            Pin(size: 65.0, middle: 0.8139),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => casarorganicosdicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_gg4jv1,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
+          // Adobe XD layer: 'Posts' (group)
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(18, '\nINTRODUÇÃO', 'Arial'),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'Os resíduos orgânicos podem ser definidos, como restos de animais ou vegetais descartados em decorrência de atividades humanas. A cidade de São Paulo produziu, em 2018, mais de 5,6 milhões de toneladas de lixo, o que representa cerca de meia tonelada por habitante. Do total, apenas 7% é reciclado.\nComo o lixo orgânico não é tratado, ele vai parar nos aterros sanitários. O problema é que a decomposição desse material gera gás metano, nocivo à atmosfera.\n Podemos mudar isso se cada um reduzir seu desperdício.'),
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 151.0, start: -120.0),
-            Pin(size: 33.0, middle: 0.6459),
-            child: Text(
-              '',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff000000),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -1.0, end: -2.0),
-            Pin(size: 79.0, start: -5.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 195.0, middle: 0.5879),
-            Pin(size: 47.0, start: 9.0),
-            child: Text(
-              'R. Orgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 138.0, middle: 0.5),
-            Pin(size: 43.0, start: 90.0),
-            child: Scrollbar(
-              child: SingleChildScrollView(
                 child: Text(
-                  'INTRODUÇÃO\n',
+                  '\nVocê sabia que o Brasil produz cerca de 37 milhões de toneladas de resíduo orgânico por ano, e apenas 1% é reciclado. Se o país tratasse esse tipo de descarte, as emissões atmosféricas seriam reduzidas ao equivalente a retirada de 7 milhões de carros das ruas. A reciclagem desse tipo de resíduo pode ser usada como adubo, combustível e energia.\n',
                   style: TextStyle(
                     fontFamily: 'Segoe UI',
-                    fontSize: 20,
-                    color: const Color(0xff1c3649),
-                    fontWeight: FontWeight.w700,
+                    fontSize: 15,
+                    color: const Color(0xfff9f9f9),
                   ),
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.center,
                 ),
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 18.0, end: 18.0),
-            Pin(size: 279.0, start: 121.0),
-            child: Text(
-              'Os resíduos orgânicos podem ser definidos, como restos de animais ou vegetais descartados em decorrência de atividades humanas. A cidade de São Paulo produziu, em 2018, mais de 5,6 milhões de toneladas de lixo, o que representa cerca de meia tonelada por habitante. Do total, apenas 7% é reciclado.\nComo o lixo orgânico não é tratado, ele vai parar nos aterros sanitários. O problema é que a decomposição desse material gera gás metano, nocivo à atmosfera.\n Podemos mudar isso se cada um reduzir seu desperdício.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
+
+
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 28,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
               ),
-              textAlign: TextAlign.center,
-            ),
+            ],
           ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 21.0, end: 20.0),
-            Pin(size: 160.0, middle: 0.5305),
-            child: Text(
-              'Você sabia que o Brasil produz cerca de 37 milhões de toneladas de resíduo orgânico por ano, e apenas 1% é reciclado. Se o país tratasse esse tipo de descarte, as emissões atmosféricas seriam reduzidas ao equivalente a retirada de 7 milhões de carros das ruas. A reciclagem desse tipo de resíduo pode ser usada como adubo, combustível e energia.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xfffbe9ff),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => casarorganicosdicas1(),
               ),
-              textAlign: TextAlign.center,
+            ],
+            child: SvgPicture.string(
+              _svg_gg4jv1,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.scaleDown,
             ),
           ),
         ],
