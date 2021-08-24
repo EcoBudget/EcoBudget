@@ -1,4 +1,6 @@
 import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas1.dart';
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -10,199 +12,32 @@ class casarinorgnicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff5f5f5),
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Resíduos Inorgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      backgroundColor: const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Transform.translate(
-            offset: Offset(-3.0, 79.0),
-            child: SizedBox(
-              width: 1384.0,
-              height: 864.0,
-              child:
-                  // Adobe XD layer: 'Posts' (group)
-                  Stack(
-                children: <Widget>[
-                  SizedBox(
-                    width: 1384.0,
-                    height: 504.0,
-                    child:
-                        // Adobe XD layer: 'Posts' (group)
-                        Stack(
-                      children: <Widget>[
-                        Transform.translate(
-                          offset: Offset(4.0, 0.0),
-                          child:
-                              // Adobe XD layer: 'Rectangle 219' (shape)
-                              Container(
-                            width: 363.0,
-                            height: 224.0,
-                            decoration: BoxDecoration(
-                              color: const Color(0xffd7eaf9),
-                            ),
-                          ),
-                        ),
-                        Transform.translate(
-                          offset: Offset(0.0, 224.0),
-                          child: SizedBox(
-                            width: 363.0,
-                            height: 280.0,
-                            child: SvgPicture.string(
-                              _svg_ej2m,
-                              allowDrawingOutsideViewBox: true,
-                            ),
-                          ),
-                        ),
-                        Transform.translate(
-                          offset: Offset(117.0, 19.0),
-                          child:
-                              // Adobe XD layer: 'CATEGORY' (text)
-                              Text(
-                            'INTRODUÇÃO',
-                            style: TextStyle(
-                              fontFamily: 'Arial',
-                              fontSize: 20,
-                              color: const Color(0xff1c3649),
-                              fontWeight: FontWeight.w700,
-                              height: 1.5,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            textAlign: TextAlign.left,
-                          ),
-                        ),
-                        Transform.translate(
-                          offset: Offset(1248.0, 287.0),
-                          child:
-                              // Adobe XD layer: 'CATEGORY' (text)
-                              Text(
-                            'INTRODUÇÃO',
-                            style: TextStyle(
-                              fontFamily: 'Arial',
-                              fontSize: 20,
-                              color: const Color(0xff1c3649),
-                              fontWeight: FontWeight.w700,
-                              height: 1.5,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            textAlign: TextAlign.left,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(2.0, 506.0),
-                    child: SizedBox(
-                      width: 372.0,
-                      height: 358.0,
-                      child:
-                          // Adobe XD layer: 'Posts' (group)
-                          Stack(
-                        children: <Widget>[
-                          // Adobe XD layer: 'Rectangle 219' (shape)
-                          Container(
-                            width: 363.0,
-                            height: 226.0,
-                            decoration: BoxDecoration(
-                              color: const Color(0xffd7eaf9),
-                            ),
-                          ),
-                          Container(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(79.0, 569.0),
-                    child: Text(
-                      'Como reduzir\n               esse uso?',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 25,
-                        color: const Color(0xff1c3649),
-                        fontWeight: FontWeight.w700,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                ],
+          Column(
+            children: <Widget>[
+              tituloformatado(20, '\nINTRODUÇÃO', 'Arial'),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'Os Resíduos Inorgânicos são originados da separação dos Resíduos Sólidos Urbanos (RSUs), denominados como lixo urbano, que resultam da atividade doméstica e comercial dos grandes centros. O primeiro passo para a reciclagem começa na sua própria casa,\n reduzindo o consumo de RSUs.'),
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.8108),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => geralrinorgnicosdicas1(),
+              Container(
+                height: 210,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-              ],
-              child: SvgPicture.string(
-                _svg_h8ra8,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 79.0, start: 0.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Container(),
-                      Container(),
-                    ],
-                  ),
-                ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 218.0, middle: 0.5704),
-            Pin(size: 47.0, start: 12.0),
-            child: Text(
-              'R. Inorgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 12.0, end: 12.0),
-            Pin(size: 158.0, start: 136.0),
-            child: Text(
-              'Os Resíduos Inorgânicos são originados da separação dos Resíduos Sólidos Urbanos (RSUs), denominados como lixo urbano, que resultam da atividade doméstica e comercial dos grandes centros. O primeiro passo para a reciclagem começa na sua própria casa,\n reduzindo o consumo de RSUs.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 24.0, end: 24.0),
-            Pin(size: 208.0, middle: 0.4657),
-            child: Scrollbar(
-              child: SingleChildScrollView(
                 child: Text.rich(
                   TextSpan(
                     style: TextStyle(
@@ -212,14 +47,14 @@ class casarinorgnicos extends StatelessWidget {
                     ),
                     children: [
                       TextSpan(
-                        text: 'Curiosidade',
+                        text: '\nCuriosidade',
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       TextSpan(
                         text:
-                            ': As vantagens da separação do lixo doméstico de maneira consciente trazem inúmeros benefícios  à natureza. Além de aliviar os lixões e aterros sanitários, chegando até eles apenas restos de resíduos que não podem ser reaproveitados, grande parte dos resíduos inorgânicos gerados em casa podem ser \nreutilizados. Muitos dos resíduos que são\ndescartados podem se tornar verdadeiro tesouro lucrativo se bem aproveitado.\n',
+                            ': \nAs vantagens da separação do lixo doméstico de maneira consciente trazem inúmeros benefícios  à natureza. Além de aliviar os lixões e aterros sanitários, chegando até eles apenas restos de resíduos que não podem ser reaproveitados, grande parte dos resíduos inorgânicos gerados em casa podem ser \nreutilizados. Muitos dos resíduos que são\ndescartados podem se tornar verdadeiro tesouro lucrativo se bem aproveitado.\n',
                       ),
                     ],
                   ),
@@ -228,6 +63,34 @@ class casarinorgnicos extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => geralrinorgnicosdicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_h8ra8,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
         ],
