@@ -54,7 +54,7 @@ class casarorganicos extends StatelessWidget {
                 ),
               ),
 
-
+              SizedBox(height: 30,),
               Text(
                 'Como reduzir\n               esse uso?',
                 style: TextStyle(
@@ -84,6 +84,7 @@ class casarorganicos extends StatelessWidget {
               fit: BoxFit.scaleDown,
             ),
           ),
+          SizedBox(height: 30,),
         ],
       ),
     );

@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -11,207 +13,88 @@ class escolarinoranicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff5f5f5),
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Resíduos Inorgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+      ),
+      backgroundColor:  const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Transform.translate(
-            offset: Offset(-5.0, 78.0),
-            child: SizedBox(
-              width: 371.0,
-              height: 646.0,
-              child:
-                  // Adobe XD layer: 'Posts' (group)
-                  Stack(
-                children: <Widget>[
-                  Transform.translate(
-                    offset: Offset(6.0, 0.0),
-                    child: SizedBox(
-                      width: 363.0,
-                      height: 364.0,
-                      child:
-                          // Adobe XD layer: 'Posts' (group)
-                          Stack(
-                        children: <Widget>[
-                          // Adobe XD layer: 'Rectangle 219' (shape)
-                          Container(
-                            width: 363.0,
-                            height: 224.0,
-                            decoration: BoxDecoration(
-                              color: const Color(0xffd7eaf9),
-                            ),
-                          ),
-                          Transform.translate(
-                            offset: Offset(0.0, 224.0),
-                            child: SizedBox(
-                              width: 363.0,
-                              height: 140.0,
-                              child: SvgPicture.string(
-                                _svg_mhnqr,
-                                allowDrawingOutsideViewBox: true,
-                              ),
-                            ),
-                          ),
-                          Transform.translate(
-                            offset: Offset(112.0, 19.0),
-                            child:
-                                // Adobe XD layer: 'CATEGORY' (text)
-                                Text(
-                              'INTRODUÇÃO',
-                              style: TextStyle(
-                                fontFamily: 'Arial',
-                                fontSize: 20,
-                                color: const Color(0xff1c3649),
-                                fontWeight: FontWeight.w700,
-                                height: 1.5,
-                              ),
-                              textHeightBehavior: TextHeightBehavior(
-                                  applyHeightToFirstAscent: false),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(0.0, 364.0),
-                    child: SizedBox(
-                      width: 371.0,
-                      height: 282.0,
-                      child:
-                          // Adobe XD layer: 'Posts' (group)
-                          Stack(
-                        children: <Widget>[
-                          Transform.translate(
-                            offset: Offset(5.0, 0.0),
-                            child:
-                                // Adobe XD layer: 'Rectangle 219' (shape)
-                                Container(
-                              width: 363.0,
-                              height: 198.0,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffd7eaf9),
-                              ),
-                            ),
-                          ),
-                          Container(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(72.0, 395.0),
-                    child: Text(
-                      'Como reduzir\n               esse uso?',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 25,
-                        color: const Color(0xff1c3649),
-                        fontWeight: FontWeight.w700,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                ],
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(28,'\nINTRODUÇÃO' , 'Arial'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: textoformatado(17,'\nAs escolas são grandes responsáveis pela \nformação/educação dos jovens e por isso é \nfundamental que assuntos como reciclagem e \ndescarte correto dos materiais sejam discutidos \ne implementados para que desde cedo esses\njovens tenham contato com essa cultura de\nreciclagem.\n'  ),
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.7968),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => geralrinorgnicosdicas1(),
+
+              Container(
+                height: 140,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-              ],
-              child: SvgPicture.string(
-                _svg_fgrf6c,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 18.0, end: 21.0),
-            Pin(size: 160.0, middle: 0.2394),
-            child: Text(
-              'As escolas são grandes responsáveis pela \nformação/educação dos jovens e por isso é \nfundamental que assuntos como reciclagem e \ndescarte correto dos materiais sejam discutidos \ne implementados para que desde cedo esses\njovens tenham contato com essa cultura de\nreciclagem.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 17.0, end: 17.0),
-            Pin(size: 100.0, middle: 0.5144),
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 15,
-                  color: const Color(0xffffffff),
-                ),
-                children: [
+                child: Text.rich(
                   TextSpan(
-                    text: 'Curiosidade:',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Segoe UI',
+                      fontSize: 18,
+                      color: const Color(0xfffbe9ff),
                     ),
-                  ),
-                  TextSpan(
-                    text:
-                        ' cerca de 40% do lixo gerado pelas \nescolas é “seco”, ou seja, potencialmente \nreciclável. Assim sendo, sua correta gestão é \nfundamental, tanto para exemplo às crianças \nquanto para o bem-estar do planeta.',
-                  ),
-                ],
-              ),
-              textHeightBehavior:
-                  TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 79.0, start: 0.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Container(),
-                      Container(),
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                        '  cerca de 40% do lixo gerado pelas escolas é “seco”, ou seja, potencialmente \nreciclável. Assim sendo, sua correta gestão é \nfundamental, tanto para exemplo às crianças \nquanto para o bem-estar do planeta.',
+                      ),
                     ],
                   ),
+                  textHeightBehavior:
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
+                  textAlign: TextAlign.center,
                 ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 218.0, middle: 0.5775),
-            Pin(size: 47.0, start: 16.0),
-            child: Text(
-              'R. Inorgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.left,
+
+              SizedBox(height: 35.0,),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => geralrinorgnicosdicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_fgrf6c,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
+
         ],
       ),
     );

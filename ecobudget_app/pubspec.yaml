@@ -67,6 +67,10 @@ flutter:
       - assets/images/aegua_9.png
       - assets/images/tabela_lampadas.png
       - assets/images/energia_icone.jpg
+      - assets/images/economize_agua.png
+      - assets/images/eco_light.png
+      - assets/images/organic_food.png
+      - assets/images/garbage.png
 
   #   - images/a_dot_ham.jpeg
 

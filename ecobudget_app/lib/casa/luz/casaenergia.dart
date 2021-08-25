@@ -32,7 +32,7 @@ class casaenergia extends StatelessWidget {
               ),
               SizedBox(height: 50,),
               Container(
-                height: 150,
+                height: 130,
                 decoration: BoxDecoration(
                   color: Color(0xff236068),
                 ),

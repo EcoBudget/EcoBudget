@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'escolaenergiadicas1.dart';
@@ -10,215 +12,93 @@ class escolaenergia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Energia"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      backgroundColor: const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: -7.2, end: -8.0),
-            Pin(start: 70.0, end: 0.0),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 1.0),
-                  Pin(size: 391.2, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 3.2, end: 0.0),
-                        Pin(size: 243.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 3.0),
-                        Pin(size: 148.2, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 234' (shape)
-                            SvgPicture.string(
-                          _svg_eckgjv,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 136.0, start: 119.2),
-                        Pin(size: 22.0, start: 21.0),
-                        child:
-                            // Adobe XD layer: 'CATEGORY' (text)
-                            Text(
-                          'INTRODUÇÃO',
-                          style: TextStyle(
-                            fontFamily: 'Arial',
-                            fontSize: 20,
-                            color: const Color(0xff1c3649),
-                            fontWeight: FontWeight.w700,
-                            height: 1.5,
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 28.2, end: 29.0),
-                        Pin(size: 180.0, start: 58.0),
-                        child: Scrollbar(
-                          child: SingleChildScrollView(
-                            child: Text(
-                              'A energia elétrica é de extrema importância\nno ambiente escolar e reflete diretamente \nna qualidade do aprendizado dos alunos. \nDesse modo, é essencial que haja uma boa\neficiência. Tendo isso em vista, vale ressaltar a possibilidade de alterar o sistema elétrico sem que haja perda de qualidade, podendo inclusive proporcionar uma economia financeira \n',
-                              style: TextStyle(
-                                fontFamily: 'Segoe UI',
-                                fontSize: 15,
-                                color: const Color(0xff1c3649),
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 2.2, end: 0.0),
-                  Pin(size: 270.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 167.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Container(),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 226.0, middle: 0.4973),
-                  Pin(size: 57.0, middle: 0.6873),
-                  child: Text(
-                    'Como reduzir\n               esse uso?',
-                    style: TextStyle(
-                      fontFamily: 'Arial',
-                      fontSize: 25,
-                      color: const Color(0xff1c3649),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.7957),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => escolaenergiadicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_fgrf6c,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
+          // Adobe XD layer: 'Posts' (group)
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(20, '\nINTRODUÇÃO', 'Arial'),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'A energia elétrica é de extrema importância\nno ambiente escolar e reflete diretamente \nna qualidade do aprendizado dos alunos. \nDesse modo, é essencial que haja uma boa\neficiência. Tendo isso em vista, vale ressaltar a possibilidade de alterar o sistema elétrico sem que haja perda de qualidade, podendo inclusive proporcionar uma economia financeira \n'),
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 79.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
+
+              Container(
+                height: 160,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
+                ),
+                child: Text.rich(
+                  TextSpan(
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 15,
+                      color: const Color(0xfff9f9f9),
+                    ),
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
                         ),
+                      ),
+                      TextSpan(
+                        text:
+                        '\nNas escolas de São Paulo, estima-se que 70% da energia seja destinada \na iluminação, 16% a equipamentos elétricos (geladeiras, bebedouros, impressoras) e 14% \na bombas de recalque \n(componentes da rede hidráulicas).',
                       ),
                     ],
                   ),
-                ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 8.0, end: 8.0),
-            Pin(size: 120.0, middle: 0.5339),
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 15,
-                  color: const Color(0xfff9f9f9),
-                ),
-                children: [
-                  TextSpan(
-                    text: 'Curiosidade',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  TextSpan(
-                    text:
-                        ': Nas escolas de São Paulo, \nestima-se que 70% da energia seja destinada \na iluminação, 16% a equipamentos elétricos \n(geladeiras, bebedouros, impressoras) e 14% \na bombas de recalque \n(componentes da rede hidráulicas).:',
-                  ),
-                ],
-              ),
-              textHeightBehavior:
+                  textHeightBehavior:
                   TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 115.0, middle: 0.4735),
-            Pin(size: 47.0, start: 13.0),
-            child: Text(
-              'Energia',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffaf7f7),
+                  textAlign: TextAlign.center,
+                ),
               ),
-              textAlign: TextAlign.left,
+
+              SizedBox(
+                height: 50.0,
+              ),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => escolaenergiadicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_fgrf6c,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
         ],
@@ -226,7 +106,6 @@ class escolaenergia extends StatelessWidget {
     );
   }
 }
-
 const String _svg_eckgjv =
     '<svg viewBox="0.0 243.0 371.2 148.2" ><path transform="translate(0.0, 243.0)" d="M 0 0 L 371.2000427246094 0 L 371.2000427246094 148.199951171875 L 0 148.199951171875 L 0 0 Z" fill="#236068" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_fgrf6c =

@@ -9,9 +9,12 @@ import 'package:ecobudget_app/economica/AEENERGIA.dart';
 import 'package:ecobudget_app/economica/AEGUA.dart';
 import 'package:ecobudget_app/economica/ANLISEECONOMICA.dart';
 import 'package:ecobudget_app/escola/agua/escolagua.dart';
+import 'package:ecobudget_app/escola/luz/escolaenergia.dart';
 import 'package:ecobudget_app/escola/luz/escolaenergiadicas1.dart';
+import 'package:ecobudget_app/escola/residuos_inorganicos/escolarinoranicos.dart';
 import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas1.dart';
 import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas2.dart';
+import 'package:ecobudget_app/escola/residuos_organicos/escolarorganicos.dart';
 import 'package:ecobudget_app/escola/residuos_organicos/escolarorganicosdicas1.dart';
 import 'package:ecobudget_app/infos/sobreInovaMaua.dart';
 import 'package:ecobudget_app/infos/sobrerecursos.dart';
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: escolagua(),
+      home: home(),
     );
   }
 }

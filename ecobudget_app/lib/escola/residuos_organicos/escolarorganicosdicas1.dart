@@ -1,3 +1,6 @@
+import 'package:ecobudget_app/escola/residuos_organicos/escolarorganicosdicas2.dart';
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,176 +10,40 @@ class escolarorganicosdicas1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Novas Atitudes"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return escolarorganicosdicas2();
+              }));
+            },
+            icon: Icon(Icons.arrow_forward),
+            tooltip: 'Mudanças Estruturais',
+          ),
+        ],
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(size: 94.0, middle: 0.5639),
-            Pin(size: 42.0, start: 25.0),
-            child: Text(
-              'Dicas',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 35,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 143.0, middle: 0.5023),
-            Pin(size: 26.0, middle: 0.1844),
-            child: Text(
-              'Conscientização',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 54.0, middle: 0.5033),
-            Pin(size: 26.0, middle: 0.5336),
-            child: Text(
-              'Reuso',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 9.6),
-            Pin(size: 16.0, middle: 0.0),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(size: 16.0, middle: 0.5),
-                    Pin(size: 16.0, middle: 0.5),
-                    child:
-                        // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                        Scrollbar(
-                      child: SingleChildScrollView(
-                        child: Wrap(
-                          alignment: WrapAlignment.center,
-                          spacing: 20,
-                          runSpacing: 20,
-                          children: [{}].map((itemData) {
-                            return SizedBox(
-                              width: 16.0,
-                              height: 16.0,
-                              child:
-                                  // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                  Stack(
-                                children: <Widget>[
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(start: 0.0, end: 0.0),
-                                    child:
-                                        // Adobe XD layer: 'Path 10' (shape)
-                                        SvgPicture.string(
-                                      _svg_ru0g9a,
-                                      allowDrawingOutsideViewBox: true,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 51.0, end: 51.0),
-            Pin(size: 40.0, middle: 0.2857),
-            child: Text(
-              'Comprar somente o necessário e estar \nsempre atento às datas de validade.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 46.0, end: 45.0),
-            Pin(size: 85.0, middle: 0.4447),
-            child: Text(
-              'Educar os alunos quanto ao desperdício \ne incentivá-los a colocar no prato somente o que forem comer.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 46.0, end: 45.0),
-            Pin(size: 60.0, middle: 0.6293),
-            child: Text(
-              'Procurar maneiras de reutilizar galhos, \ngrama e folhas que foram gerados na \nmanutenção das áreas verdes.  ',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 78.0, middle: 0.5),
-            Pin(size: 26.0, middle: 0.7399),
-            child: Text(
-              'Descarte',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 51.0, end: 45.0),
-            Pin(size: 140.0, end: 54.0),
-            child: Scrollbar(
-              child: SingleChildScrollView(
-                child: Text(
-                  '\nPara o descarte de resíduos orgânicos\n aconselha-se embalá-los separadamente do restante do lixo em sacos de plástico biodegradáveis como o plástico verde, o plástico PLA ou o plástico de amido. \n',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 15,
-                    color: const Color(0xff1c3649),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ),
+          tituloformatado(19,'\nConscientização' , 'Segoe UI'),
+
+          bordaamarela(80,'\nComprar somente o necessário e estar \nsempre atento às datas de validade.' , 15),
+          bordaamarela(90,'\nEducar os alunos quanto ao desperdício \ne incentivá-los a colocar no prato somente o que forem comer.' , 15),
+          tituloformatado(19, 'Reuso', 'Segoe UI'),
+          bordaamarela(90,'\nProcurar maneiras de reutilizar galhos, \ngrama e folhas que foram gerados na \nmanutenção das áreas verdes.  ' , 15),
+          tituloformatado(19,'Descarte' , 'Segoe UI'),
+         bordaamarela(110,'\nPara o descarte de resíduos orgânicos\n aconselha-se embalá-los separadamente do restante do lixo em sacos de plástico biodegradáveis como o plástico verde, o plástico PLA ou o plástico de amido. \n' , 15),
+
+
         ],
       ),
     );

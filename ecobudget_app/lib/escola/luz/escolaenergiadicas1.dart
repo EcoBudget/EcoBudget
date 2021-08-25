@@ -1,113 +1,60 @@
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+
+import 'escolaenergiadicas2.dart';
 
 class escolaenergiadicas1 extends StatelessWidget {
   //escolaenergiadicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Novas Atitudes"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return escolaenergiadicas2();
+              }));
+            },
+            icon: Icon(Icons.arrow_forward),
+            tooltip: 'Mudanças Estruturais',
+          ),
+        ],
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(size: 53.0, middle: 0.5016),
-            Pin(size: 26.0, start: 133.0),
-            child: Text(
-              'Ações',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
+          tituloformatado(19, '\nAções', 'Segoe UI'),
+          bordaamarela(
+              90,
+              '\nDesligar bebedouros, impressoras e \nprojetores da tomada no fim do expediente e durante os fins de semana, quando não necessários.',
+              15),
+          bordaamarela(70, '\nManter holofotes da quadra apagados.', 17),
+          tituloformatado(19, '\nPreferências\n', 'Segoe UI'),
+          Container(
+            child:
+                tituloformatado(17, '\nEquipamentos/instalações', 'Segoe UI'),
+            height: 65,
+            decoration: BoxDecoration(
+              color: Colors.yellow[50],
+              borderRadius: BorderRadius.circular(24),
             ),
           ),
-          Pinned.fromPins(
-            Pin(size: 109.0, middle: 0.502),
-            Pin(size: 26.0, middle: 0.5517),
-            child: Text(
-              'Preferências',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 47.0, end: 49.0),
-            Pin(size: 88.0, middle: 0.2774),
-            child: Text(
-              'Desligar bebedouros, impressoras e \nprojetores da tomada no fim do expediente e durante os fins de semana, quando não necessários.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 51.0, end: 51.0),
-            Pin(size: 25.0, middle: 0.449),
-            child: Text(
-              'Manter holofotes da quadra apagados.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 234.0, middle: 0.5),
-            Pin(size: 20.0, end: 45.0),
-            child: Text(
-              'Aproveitar ao máximo a luz natural.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 45.0, end: 33.0),
-            Pin(size: 140.0, middle: 0.7937),
-            child: Text(
-              'Escolha certa de lâmpadas, \nar-condicionado, geladeira, bebedouros e \nimpressoras, optando por produtos que \nutilizem menos energia elétrica e \nque sejam eficientes, como lâmpadas de\nLED e geladeiras com o modo \nde economia de energia.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 208.0, middle: 0.4737),
-            Pin(size: 22.0, middle: 0.6379),
-            child: Text(
-              'Equipamentos/instalações',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+          bordaamarela(
+              160,
+              '\nEscolha certa de lâmpadas, \nar-condicionado, geladeira, bebedouros e \nimpressoras, optando por produtos que \nutilizem menos energia elétrica e \nque sejam eficientes, como lâmpadas de\nLED e geladeiras com o modo \nde economia de energia.',
+              15),
+          bordaamarela(60, '\nAproveitar ao máximo a luz natural.', 17),
         ],
       ),
     );

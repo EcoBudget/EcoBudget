@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import '../escola.dart';
@@ -11,233 +13,90 @@ class escolarorganicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
+      backgroundColor: const Color(0xffd7eaf9),
+      appBar: AppBar(
+        title: Text("Resíduos Orgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.4653),
-            Pin(size: 30.0, middle: 0.8227),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                SvgPicture.string(
+          // Adobe XD layer: 'Posts' (group)
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(18, '\nINTRODUÇÃO', 'Arial'),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'O descarte de lixo é um tópico muito discutido \nno ambiente escolar, em especial o lixo orgânico. \nTem um grande potencial, mas muitas vezes é \nignorado e descartado indevidamente. \nEstima-se que, anualmente, cerca de 45 mil \ntoneladas de resíduos orgânicos sejam\nproduzidas por escolas, sendo 30 mil toneladas\nprovenientes de refeições servidas aos \nestudantes e 15 mil toneladas provenientes de \nmanutenções, tais como: cortar grama, plantar \nárvores,manutenção de horta e etc.'),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
+                ),
+                child: Text.rich(
+                  TextSpan(
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 15,
+                      color: const Color(0xffffffff),
+                    ),
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                        ' De acordo com a ABRELPE \n(Associação Brasileira das Empresas de Limpeza \nPública e Resíduos Especiais), se o lixo orgânico direcionado a aterros e lixões fosse destinado a compostagem e práticas sustentáveis, seria possível impedir que 40 mil toneladas de CO2 fossem liberadas na atmosfera por ano.\n',
+                      ),
+                    ],
+                  ),
+                  textHeightBehavior: TextHeightBehavior(
+                      applyHeightToFirstAscent: false),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(height: 40,),
+
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 28,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => escolarorganicosdicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
               _svg_zmu7v,
               allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -3.0, end: -1.0),
-            Pin(size: 79.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 195.0, middle: 0.5818),
-            Pin(size: 47.0, start: 12.0),
-            child: Text(
-              'R. Orgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -6.3, end: -4.0),
-            Pin(start: 78.0, end: -29.3),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 523.2, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 3.3, end: 0.0),
-                        Pin(size: 313.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 2.9),
-                        Pin(size: 210.2, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 234' (shape)
-                            SvgPicture.string(
-                          _svg_xk49wy,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 136.0, start: 115.3),
-                        Pin(size: 22.0, start: 19.0),
-                        child:
-                            // Adobe XD layer: 'CATEGORY' (text)
-                            Text(
-                          'INTRODUÇÃO',
-                          style: TextStyle(
-                            fontFamily: 'Arial',
-                            fontSize: 20,
-                            color: const Color(0xff1c3649),
-                            fontWeight: FontWeight.w700,
-                            height: 1.5,
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 29.3, end: 26.0),
-                        Pin(size: 160.0, end: 25.2),
-                        child: Text.rich(
-                          TextSpan(
-                            style: TextStyle(
-                              fontFamily: 'Segoe UI',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                            ),
-                            children: [
-                              TextSpan(
-                                text: 'Curiosidade:',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              TextSpan(
-                                text:
-                                    ' De acordo com a ABRELPE \n(Associação Brasileira das Empresas de Limpeza \nPública e Resíduos Especiais), se o lixo orgânico direcionado a aterros e lixões fosse destinado a compostagem e práticas sustentáveis, seria possível impedir que 40 mil toneladas de CO2 fossem liberadas na atmosfera por ano.\n',
-                              ),
-                            ],
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 2.9),
-                  Pin(size: 304.3, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 1.0, end: -1.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 234' (shape)
-                            SvgPicture.string(
-                          _svg_lk50uc,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.3, end: 0.1),
-                        Pin(start: 0.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            SvgPicture.string(
-                          _svg_ftlku6,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 226.0, middle: 0.5079),
-                  Pin(size: 57.0, middle: 0.7179),
-                  child: Text(
-                    'Como reduzir\n               esse uso?',
-                    style: TextStyle(
-                      fontFamily: 'Arial',
-                      fontSize: 25,
-                      color: const Color(0xff1c3649),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 15.5, end: 14.5),
-            Pin(size: 220.0, middle: 0.2149),
-            child: Text(
-              'O descarte de lixo é um tópico muito discutido \nno ambiente escolar, em especial o lixo orgânico. \nTem um grande potencial, mas muitas vezes é \nignorado e descartado indevidamente. \nEstima-se que, anualmente, cerca de 45 mil \ntoneladas de resíduos orgânicos sejam\nproduzidas por escolas, sendo 30 mil toneladas\nprovenientes de refeições servidas aos \nestudantes e 15 mil toneladas provenientes de \nmanutenções, tais como: cortar grama, plantar \nárvores,manutenção de horta e etc.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, end: 143.0),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => escolarorganicosdicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_zf79lq,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
+              fit: BoxFit.scaleDown,
             ),
           ),
         ],
