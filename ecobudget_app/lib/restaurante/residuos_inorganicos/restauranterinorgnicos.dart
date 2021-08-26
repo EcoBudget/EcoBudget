@@ -1,4 +1,6 @@
 import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas1.dart';
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -10,179 +12,86 @@ class restauranterinorgnicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff5f5f5),
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Resíduos Inorgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      backgroundColor: const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Transform.translate(
-            offset: Offset(-3.0, 78.0),
-            child: SizedBox(
-              width: 365.0,
-              height: 429.0,
-              child:
-                  // Adobe XD layer: 'Posts' (group)
-                  Stack(
-                children: <Widget>[
-                  // Adobe XD layer: 'Rectangle 219' (shape)
-                  Container(
-                    width: 363.0,
-                    height: 289.0,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffd7eaf9),
+          Column(
+            children: <Widget>[
+              tituloformatado(20, '\nINTRODUÇÃO', 'Arial'),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'Os resíduos sólidos podem ser definidos como todo e qualquer refugo, sobra ou detrito resultante da atividade humana.  Em restaurantes, a classificação utilizada é baseada na composição esses resíduos, sendo eles oriundos de produtos industrializados, normalmente utilizados nas embalagens. Apresentam riscos à saúde e ao meio ambiente caso descartados de maneira incorreta e sem o devido planejamento.'
                     ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(2.0, 289.0),
-                    child: SizedBox(
-                      width: 363.0,
-                      height: 140.0,
-                      child: SvgPicture.string(
-                        _svg_s9plsd,
-                        allowDrawingOutsideViewBox: true,
-                      ),
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: Offset(116.0, 19.0),
-                    child:
-                        // Adobe XD layer: 'CATEGORY' (text)
-                        Text(
-                      'INTRODUÇÃO',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 20,
-                        color: const Color(0xff1c3649),
-                        fontWeight: FontWeight.w700,
-                        height: 1.5,
-                      ),
-                      textHeightBehavior:
-                          TextHeightBehavior(applyHeightToFirstAscent: false),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                ],
               ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(-2.0, 507.0),
-            child:
-                // Adobe XD layer: 'Rectangle 219' (shape)
-                Container(
-              width: 363.0,
-              height: 188.0,
-              decoration: BoxDecoration(
-                color: const Color(0xffd7eaf9),
-              ),
-            ),
-          ),
-          Container(),
-          Transform.translate(
-            offset: Offset(67.0, 532.0),
-            child: Text(
-              'Como reduzir\n               esse uso?',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.7769),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => geralrinorgnicosdicas1(),
+              Container(
+                height: 140,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-              ],
-              child: SvgPicture.string(
-                _svg_,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 19.0, end: 19.0),
-            Pin(size: 231.0, middle: 0.2383),
-            child: Text(
-              'Os resíduos sólidos podem ser definidos como todo e qualquer refugo, sobra ou detrito resultante da atividade humana.  Em restaurantes, a classificação utilizada é baseada na composição esses resíduos, sendo eles oriundos de produtos industrializados, normalmente utilizados nas embalagens. Apresentam riscos à saúde e ao meio ambiente caso descartados de maneira incorreta e sem o devido planejamento.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 22.0, end: 16.0),
-            Pin(size: 100.0, middle: 0.5352),
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 15,
-                  color: const Color(0xffffffff),
-                ),
-                children: [
+                child: Text.rich(
                   TextSpan(
-                    text: 'Curiosidade:',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Segoe UI',
+                      fontSize: 17,
+                      color: const Color(0xfffafdff),
                     ),
-                  ),
-                  TextSpan(
-                    text:
-                        ' cerca de 40% do lixo gerado pelas \nescolas seja “seco”, ou seja, potencialmente \nreciclável. Assim sendo, sua correta gestão é \nfundamental, tanto para exemplo às crianças \ncomo para o bem-estar do planeta.',
-                  ),
-                ],
-              ),
-              textHeightBehavior:
-                  TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 79.0, start: 0.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Container(),
-                      Container(),
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                        ': cerca de 40% do lixo gerado pelas escolas seja “seco”, ou seja, potencialmente reciclável. Assim sendo, sua correta gestão é fundamental, tanto para exemplo às crianças como para o bem-estar do planeta.',
+                      ),
                     ],
                   ),
+                  textHeightBehavior:
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
+                  textAlign: TextAlign.center,
                 ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 218.0, middle: 0.5282),
-            Pin(size: 47.0, start: 14.0),
-            child: Text(
-              'R. Inorgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.left,
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => geralrinorgnicosdicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
         ],

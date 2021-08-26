@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -10,342 +12,88 @@ class restauranteenergia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
+      appBar: AppBar(
+        title: Text("Energia"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+      ),
+      backgroundColor:  const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -16.0),
-            Pin(size: 97.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 16.0),
-                  Pin(size: 79.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff60006e),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 98.0, middle: 0.4733),
-            Pin(size: 40.0, start: 19.0),
-            child: Text(
-              'Energia',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 30,
-                color: const Color(0xfffbe9ff),
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(30,'\nINTRODUÇÃO' , 'Arial'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: textoformatado(20,'O uso de energia elétrica decorre da\nutilização de equipamentos eletrônicos, \ncujo uso se relaciona primordialmente\n ao cardápio do restaurante e ao\nnúmero de refeições servidas.' ),
               ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 79.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+              SizedBox(height: 50,),
+              Container(
+                height: 130,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 115.0, middle: 0.5061),
-            Pin(size: 47.0, start: 13.0),
-            child: Text(
-              'Energia',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -10.0, end: -11.0),
-            Pin(start: 79.0, end: -10.0),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 8.0, end: 2.0),
-                  Pin(size: 357.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 53.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 1.6, end: 9.0),
-                        Pin(size: 120.2, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 234' (shape)
-                            SvgPicture.string(
-                          _svg_efvzb5,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 136.0, start: 112.0),
-                        Pin(size: 22.0, start: 19.0),
-                        child:
-                            // Adobe XD layer: 'CATEGORY' (text)
-                            Text(
-                          'INTRODUÇÃO',
-                          style: TextStyle(
-                            fontFamily: 'Arial',
-                            fontSize: 20,
-                            color: const Color(0xff1c3649),
-                            fontWeight: FontWeight.w700,
-                            height: 1.5,
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 334.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Posts' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 10.0),
-                        Pin(size: 160.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 7.0, end: 3.0),
-                        Pin(size: 180.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 234' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 10.0, end: 0.0),
-                        Pin(size: 201.0, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle 219' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffd7eaf9),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 226.0, middle: 0.4968),
-                  Pin(size: 57.0, middle: 0.6388),
-                  child: Text(
-                    'Como reduzir\n               esse uso?',
-                    style: TextStyle(
-                      fontFamily: 'Arial',
-                      fontSize: 25,
-                      color: const Color(0xff1c3649),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 19.0, end: 21.0),
-            Pin(size: 110.0, middle: 0.2154),
-            child: Text(
-              'O uso de energia elétrica decorre da\nutilização de equipamentos eletrônicos, \ncujo uso se relaciona primordialmente\n ao cardápio do restaurante e ao\nnúmero de refeições servidas.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.7795),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => restauranteenergiadicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_v4w28y,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 18.6),
-            Pin(size: 16.0, middle: 0.0455),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  PageLink(
-                links: [
-                  PageLinkInfo(
-                    transition: LinkTransition.Fade,
-                    ease: Curves.easeOut,
-                    duration: 0.3,
-                    pageBuilder: () => restaurante(),
-                  ),
-                ],
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromPins(
-                      Pin(size: 16.0, middle: 0.5),
-                      Pin(size: 16.0, middle: 0.5),
-                      child:
-                          // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                          Scrollbar(
-                        child: SingleChildScrollView(
-                          child: Wrap(
-                            alignment: WrapAlignment.center,
-                            spacing: 20,
-                            runSpacing: 20,
-                            children: [{}].map((itemData) {
-                              return SizedBox(
-                                width: 16.0,
-                                height: 16.0,
-                                child:
-                                    // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                    Stack(
-                                  children: <Widget>[
-                                    Pinned.fromPins(
-                                      Pin(start: 0.0, end: 0.0),
-                                      Pin(start: 0.0, end: 0.0),
-                                      child:
-                                          // Adobe XD layer: 'Path 10' (shape)
-                                          SvgPicture.string(
-                                        _svg_ru0g9a,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 19.0, end: 14.0),
-            Pin(size: 100.0, middle: 0.4924),
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 15,
-                  color: const Color(0xfff9f9f9),
-                ),
-                children: [
+                child: Text.rich(
                   TextSpan(
-                    text: 'Curiosidade:',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Segoe UI',
+                      fontSize: 17,
+                      color: const Color(0xfff9f9f9),
                     ),
-                  ),
-                  TextSpan(
-                    text:
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
                         ' Os restaurantes são os maiores consumidores de energia elétrica no setor comercial, gerando altos gastos que podem ser reduzidos por meio de ações simples e sustentáveis.',
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              textHeightBehavior:
+                  textHeightBehavior:
                   TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+
+              SizedBox(height: 55.0,),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => restauranteenergiadicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_v4w28y,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
+
         ],
       ),
     );

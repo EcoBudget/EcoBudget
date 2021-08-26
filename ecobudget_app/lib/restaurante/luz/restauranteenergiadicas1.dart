@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import './restauranteenergiadicas2.dart';
@@ -10,419 +12,42 @@ class restauranteenergiadicas1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Novas Atitudes"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return restauranteenergiadicas2();
+              }));
+            },
+            icon: Icon(Icons.arrow_forward),
+            tooltip: 'Mudanças Estruturais',
+          ),
+        ],
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: -0.9, end: 17.9),
-            Pin(size: 1.0, start: 120.0),
-            child:
-                // Adobe XD layer: 'Divider' (shape)
-                Container(
-              decoration: BoxDecoration(
-                color: const Color(0xffbce0fd),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -0.9),
-            Pin(size: 121.0, start: 0.0),
-            child: SvgPicture.string(
-              _svg_h,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 94.0, middle: 0.4656),
-            Pin(size: 42.0, start: 20.0),
-            child: Text(
-              'Dicas',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 35,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 129.0, start: 10.0),
-            Pin(size: 22.0, start: 88.0),
-            child: Text(
-              'Novas atitudes',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 18,
-                color: const Color(0xffebf2f3),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 185.0, end: 13.0),
-            Pin(size: 22.0, start: 88.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => restauranteenergiadicas2(),
-                ),
-              ],
-              child: Text(
-                'Mudanças estruturais',
-                style: TextStyle(
-                  fontFamily: 'Century Gothic',
-                  fontSize: 18,
-                  color: const Color(0xffebf2f3),
-                  fontWeight: FontWeight.w700,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 129.0, start: 10.0),
-            Pin(size: 9.0, start: 116.0),
-            child: SvgPicture.string(
-              _svg_r849ep,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 18.6),
-            Pin(size: 16.0, middle: 0.0316),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(size: 16.0, middle: 0.5),
-                    Pin(size: 16.0, middle: 0.5),
-                    child:
-                        // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                        Scrollbar(
-                      child: SingleChildScrollView(
-                        child: Wrap(
-                          alignment: WrapAlignment.center,
-                          spacing: 20,
-                          runSpacing: 20,
-                          children: [{}].map((itemData) {
-                            return SizedBox(
-                              width: 16.0,
-                              height: 16.0,
-                              child:
-                                  // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                  Stack(
-                                children: <Widget>[
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(start: 0.0, end: 0.0),
-                                    child:
-                                        // Adobe XD layer: 'Path 10' (shape)
-                                        SvgPicture.string(
-                                      _svg_ru0g9a,
-                                      allowDrawingOutsideViewBox: true,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.1, end: 16.9),
-            Pin(size: 1.0, start: 120.0),
-            child:
-                // Adobe XD layer: 'Divider' (shape)
-                SvgPicture.string(
-              _svg_h26cg,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 18.6),
-            Pin(size: 16.0, middle: 0.0316),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(size: 16.0, middle: 0.5),
-                    Pin(size: 16.0, middle: 0.5),
-                    child:
-                        // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                        Scrollbar(
-                      child: SingleChildScrollView(
-                        child: Wrap(
-                          alignment: WrapAlignment.center,
-                          spacing: 20,
-                          runSpacing: 20,
-                          children: [{}].map((itemData) {
-                            return SizedBox(
-                              width: 16.0,
-                              height: 16.0,
-                              child:
-                                  // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                  Stack(
-                                children: <Widget>[
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(start: 0.0, end: 0.0),
-                                    child:
-                                        // Adobe XD layer: 'Path 10' (shape)
-                                        SvgPicture.string(
-                                      _svg_ru0g9a,
-                                      allowDrawingOutsideViewBox: true,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 18.6),
-            Pin(size: 16.0, middle: 0.0316),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  PageLink(
-                links: [
-                  PageLinkInfo(
-                    transition: LinkTransition.Fade,
-                    ease: Curves.easeOut,
-                    duration: 0.3,
-                    pageBuilder: () => restauranteenergia(),
-                  ),
-                ],
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromPins(
-                      Pin(size: 16.0, middle: 0.5),
-                      Pin(size: 16.0, middle: 0.5),
-                      child:
-                          // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                          Scrollbar(
-                        child: SingleChildScrollView(
-                          child: Wrap(
-                            alignment: WrapAlignment.center,
-                            spacing: 20,
-                            runSpacing: 20,
-                            children: [{}].map((itemData) {
-                              return SizedBox(
-                                width: 16.0,
-                                height: 16.0,
-                                child:
-                                    // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                    Stack(
-                                  children: <Widget>[
-                                    Pinned.fromPins(
-                                      Pin(start: 0.0, end: 0.0),
-                                      Pin(start: 0.0, end: 0.0),
-                                      child:
-                                          // Adobe XD layer: 'Path 10' (shape)
-                                          SvgPicture.string(
-                                        _svg_ru0g9a,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 26.0, end: 25.0),
-            Pin(size: 55.0, middle: 0.2112),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(28.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 266.0, end: 45.0),
-            Pin(size: 20.0, middle: 0.2227),
-            child: Text(
-              ' Limpar frequentemente o condensador.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 32.0, end: 19.0),
-            Pin(size: 114.0, middle: 0.6727),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(57.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 59.0, end: 47.0),
-            Pin(size: 94.0, middle: 0.6722),
-            child: Text(
-              'Não é recomendado forrar as grades das prateleiras da geladeira, pois dificulta a refrigeração dos alimentos e exige maior consumo de energia.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 32.0, end: 19.0),
-            Pin(size: 68.7, middle: 0.8009),
-            child: SvgPicture.string(
-              _svg_h1375s,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 60.0, end: 45.0),
-            Pin(size: 60.0, middle: 0.8192),
-            child: Text(
-              'Aproveitamento da luz natural.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 46.5, end: 46.5),
-            Pin(size: 60.0, middle: 0.3191),
-            child: Text(
-              'Promover a vedação dos aparelhos de refrigeração.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 26.0, end: 25.0),
-            Pin(size: 104.0, middle: 0.4304),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 32.0, end: 32.0),
-            Pin(size: 100.0, middle: 0.4402),
-            child: Text(
-              'Manter uma rotina de manutenção dos equipamentos para que a vida útil do aparelho seja aumentada e reduza o consumo de energia.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 32.0, end: 19.0),
-            Pin(size: 113.0, end: 26.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(64.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 57.0, end: 45.0),
-            Pin(size: 103.0, end: 26.0),
-            child: Text(
-              'Evitar abrir e fechar a geladeira ou freezer sem necessidade. Assim, ao abri-los, pegar todos os ingredientes necessários para o preparo do prato.\n',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 48.0, end: 48.0),
-            Pin(size: 26.0, start: 142.0),
-            child: Text(
-              'Manutenção de equipamenos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 212.0, middle: 0.5),
-            Pin(size: 26.0, middle: 0.5582),
-            child: Text(
-              'Recomendações de uso ',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+          tituloformatado(19,'\nManutenção de equipamenos' ,'Segoe UI'),
+          bordaamarela(60,' \nLimpar frequentemente o condensador.' , 16),
+          bordaamarela(60,'\nPromover a vedação dos aparelhos de refrigeração.' , 16),
+          bordaamarela(90,'\nManter uma rotina de manutenção dos equipamentos para que a vida útil do aparelho seja aumentada e reduza o consumo de energia.\n' , 15),
+          tituloformatado(19, '\nRecomendações de uso ', 'Segoe UI'),
+          bordaamarela(90,'\nNão é recomendado forrar as grades das prateleiras da geladeira, pois dificulta a refrigeração dos alimentos e exige maior consumo de energia.' , 15),
+         bordaamarela(60,'\nAproveitamento da luz natural.' , 16),
+         bordaamarela(100,'\nEvitar abrir e fechar a geladeira ou freezer sem necessidade. Assim, ao abri-los, pegar todos os ingredientes necessários para o preparo do prato.\n' , 15),
+
+
+
+
         ],
       ),
     );

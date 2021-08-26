@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:ecobudget_app/restaurante/agua/restauranteagua.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
@@ -10,340 +12,34 @@ class restauranteaguadicas2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Mudanças Estruturais"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -0.9),
-            Pin(size: 121.0, start: 0.0),
-            child: SvgPicture.string(
-              _svg_h,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 94.0, middle: 0.4625),
-            Pin(size: 42.0, start: 19.0),
-            child: Text(
-              'Dicas',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 35,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 18.6),
-            Pin(size: 16.0, middle: 0.0245),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(size: 16.0, middle: 0.5),
-                    Pin(size: 16.0, middle: 0.5),
-                    child:
-                        // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                        PageLink(
-                      links: [
-                        PageLinkInfo(
-                          transition: LinkTransition.Fade,
-                          ease: Curves.easeOut,
-                          duration: 0.3,
-                          pageBuilder: () => restauranteagua(),
-                        ),
-                      ],
-                      child: Scrollbar(
-                        child: SingleChildScrollView(
-                          child: Wrap(
-                            alignment: WrapAlignment.center,
-                            spacing: 20,
-                            runSpacing: 20,
-                            children: [{}].map((itemData) {
-                              return SizedBox(
-                                width: 16.0,
-                                height: 16.0,
-                                child:
-                                    // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                    Stack(
-                                  children: <Widget>[
-                                    Pinned.fromPins(
-                                      Pin(start: 0.0, end: 0.0),
-                                      Pin(start: 0.0, end: 0.0),
-                                      child:
-                                          // Adobe XD layer: 'Path 10' (shape)
-                                          SvgPicture.string(
-                                        _svg_ru0g9a,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 129.0, start: 9.0),
-            Pin(size: 22.0, start: 85.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => restauranteaguadicas1(),
-                ),
-              ],
-              child: Text(
-                'Novas atitudes',
-                style: TextStyle(
-                  fontFamily: 'Century Gothic',
-                  fontSize: 18,
-                  color: const Color(0xffebf2f3),
-                  fontWeight: FontWeight.w700,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 185.0, end: 8.0),
-            Pin(size: 22.0, start: 85.0),
-            child: Text(
-              'Mudanças estruturais',
-              style: TextStyle(
-                fontFamily: 'Century Gothic',
-                fontSize: 18,
-                color: const Color(0xffebf2f3),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 141.0, end: 26.0),
-            Pin(size: 9.0, start: 112.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xffebf2f3),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 26.0, end: 25.0),
-            Pin(size: 109.0, start: 175.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(69.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 48.0, end: 47.0),
-            Pin(size: 81.0, start: 195.0),
-            child: Text(
-              ' Instalação de cartazes nos banheiros para conscientizar os clientes acerca da preservação da biodiversidade.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 28.0, end: 23.0),
-            Pin(size: 152.0, end: 45.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(80.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 52.0, end: 48.0),
-            Pin(size: 120.0, end: 56.0),
-            child: Scrollbar(
-              child: SingleChildScrollView(
-                child: Text(
-                  'Trocar vasos sanitários por vasos com sistema de bi-comando pode resultar em uma redução de até 50% do consumo de água por descarga, tendo como tempo de retorno do investimento: 0,89 anos.\n',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 15,
-                    color: const Color(0xff1c3649),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 26.0, end: 25.0),
-            Pin(size: 151.0, middle: 0.2587),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(75.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 37.0, end: 36.0),
-            Pin(size: 113.0, middle: 0.2693),
-            child: Text(
-              'Trocar torneiras convencionais por hidromecânicas gera uma redução no consumo de água em até 20%, tendo como tempo de retorno do investimento 2,14 anos.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 26.0, end: 25.0),
-            Pin(size: 154.0, middle: 0.3932),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(86.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 43.0, end: 43.0),
-            Pin(size: 109.0, middle: 0.3955),
-            child: Text(
-              'Trocar torneiras convencionais por torneiras que possuem sensores de presença reduzem o consumo de água em até 40%, tendo como tempo de retorno do investimento 3,23 anos.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 24.0, end: 27.0),
-            Pin(size: 138.0, middle: 0.6936),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(71.0),
-                color: const Color(0xfff9ffe7),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 48.0, end: 47.0),
-            Pin(size: 118.0, middle: 0.6994),
-            child: Scrollbar(
-              child: SingleChildScrollView(
-                child: Text(
-                  'Substituir mictórios convencionais por hidromecânicos. Essa medida reduz em até 20% o consumo de água total, tendo como tempo de retorno do investimento 2,73 anos.\n',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 15,
-                    color: const Color(0xff070901),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 28.0, end: 23.0),
-            Pin(size: 189.9, end: 216.6),
-            child: SvgPicture.string(
-              _svg_pidor,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 52.0, end: 48.0),
-            Pin(size: 164.0, end: 217.0),
-            child: Text(
-              'Reutilização da água da pia do banheiro no sistema de descarga dos vasos sanitários por meio da instalação de um sistema hidráulico que conecte ambos. Isso pode gerar uma economia de até 10 litros por acionamento de descarga.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 134.0, middle: 0.5),
-            Pin(size: 26.0, start: 131.0),
-            child: Text(
-              'Concientização',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 48.0, end: 46.0),
-            Pin(size: 154.0, middle: 0.5467),
-            child: Text(
-              'Instalar sensores que ativam as torneiras. Dessa forma, é minimizado o  desperdício do esquecimento de uma torneira aberta ou de deixar a água correndo enquanto se ensaboa as mãos.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 82.0, middle: 0.5),
-            Pin(size: 26.0, middle: 0.2015),
-            child: Text(
-              'Torneiras',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 82.0, middle: 0.5),
-            Pin(size: 26.0, middle: 0.6083),
-            child: Text(
-              'Torneiras',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 19,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+          tituloformatado(19, '\nConcientização', 'Segoe UI'),
+          bordaamarela(90,' \nInstalação de cartazes nos banheiros para conscientizar os clientes acerca da preservação da biodiversidade.' , 15),
+          tituloformatado(19, '\nTorneiras', 'Segoe UI'),
+          bordaamarela(105, '\nTrocar torneiras convencionais por torneiras que possuem sensores de presença reduzem o consumo de água em até 40%, tendo como tempo de retorno do investimento 3,23 anos.', 15),
+          bordaamarela(95,'\nTrocar torneiras convencionais por hidromecânicas gera uma redução no consumo de água em até 20%, tendo como tempo de retorno do investimento 2,14 anos.' , 15),
+          bordaamarela(110,'\nInstalar sensores que ativam as torneiras. Dessa forma, é minimizado o  desperdício do esquecimento de uma torneira aberta ou de deixar a água correndo enquanto se ensaboa as mãos.' , 15) ,
+          bordaamarela(105,'\nSubstituir mictórios convencionais por hidromecânicos. Essa medida reduz em até 20% o consumo de água total, tendo como tempo de retorno do investimento 2,73 anos.\n' , 15),
+          bordaamarela(130,'\nReutilização da água da pia do banheiro no sistema de descarga dos vasos sanitários por meio da instalação de um sistema hidráulico que conecte ambos. Isso pode gerar uma economia de até 10 litros por acionamento de descarga.' , 15),
+          bordaamarela(110,'\nTrocar vasos sanitários por vasos com sistema de bi-comando pode resultar em uma redução de até 50% do consumo de água por descarga, tendo como tempo de retorno do investimento: 0,89 anos.\n' , 15),
+
+
+
+
+
+
         ],
       ),
     );

@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -10,345 +12,78 @@ class restauranterorganicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
-      body: Stack(
+      backgroundColor: const Color(0xffd7eaf9),
+      appBar: AppBar(
+        title: Text("Resíduos Orgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: ListView(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -16.0),
-            Pin(size: 97.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 16.0),
-                  Pin(size: 79.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff60006e),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: -16.0),
-            Pin(size: 97.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 16.0),
-                  Pin(size: 79.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff60006e),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 79.0, start: 0.0),
-            child:
-                // Adobe XD layer: 'HEADER' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'HEADER' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xff236068),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff8b9190)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 195.0, middle: 0.503),
-            Pin(size: 47.0, start: 18.0),
-            child: Text(
-              'R. Organicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
+          // Adobe XD layer: 'Posts' (group)
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(18, '\nINTRODUÇÃO', 'Arial'),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'Os resíduos orgânicos podem ser definidos como restos de animais ou vegetais decorrentes de atividades humanas. O Brasil gera, diariamente, cerca de 100 mil toneladas de lixo, sendo a maior parte é constituída de material orgânico. Do total, apenas 1% deste resíduo é aproveitado para a reciclagem. \nÉ de extrema importância que os restaurantes tenham conhecimento a respeito de seu correto direcionamento para que danos possam ser contidos.'),
               ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -1.0, end: -2.0),
-            Pin(size: 224.0, start: 80.0),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Rectangle 219' (shape)
-                      Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffd7eaf9),
-                    ),
-                  ),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-                Pinned.fromPins(
-                  Pin(size: 136.0, start: 113.0),
-                  Pin(size: 22.0, start: 19.0),
-                  child:
-                      // Adobe XD layer: 'CATEGORY' (text)
-                      Text(
-                    'INTRODUÇÃO',
-                    style: TextStyle(
-                      fontFamily: 'Arial',
-                      fontSize: 20,
-                      color: const Color(0xff1c3649),
-                      fontWeight: FontWeight.w700,
-                      height: 1.5,
-                    ),
-                    textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
-                    textAlign: TextAlign.left,
+                child: Text(
+                  '',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xfff9f9f9),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -1.0, end: -2.0),
-            Pin(size: 275.0, middle: 0.4448),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 51.0),
-                  child:
-                      // Adobe XD layer: 'Rectangle 219' (shape)
-                      Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffd7eaf9),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 104.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Rectangle 234' (shape)
-                      SvgPicture.string(
-                    _svg_pzq6,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -3.0, end: 0.0),
-            Pin(size: 338.0, end: 0.0),
-            child:
-                // Adobe XD layer: 'Posts' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 160.0, middle: 0.6742),
-                  child:
-                      // Adobe XD layer: 'Rectangle 219' (shape)
-                      Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffd7eaf9),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 143.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Rectangle 234' (shape)
-                      Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xff236068),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 154.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'Rectangle 219' (shape)
-                      Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffd7eaf9),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.7911),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => restauranterorganicosdicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_p4c,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 19.0, end: 20.0),
-            Pin(size: 304.0, middle: 0.237),
-            child: Text(
-              'Os resíduos orgânicos podem ser definidos como restos de animais ou vegetais decorrentes de atividades humanas. O Brasil gera, diariamente, cerca de 100 mil toneladas de lixo, sendo a maior parte é constituída de material orgânico. Do total, apenas 1% deste resíduo é aproveitado para a reciclagem. \nÉ de extrema importância que os restaurantes tenham conhecimento a respeito de seu correto direcionamento para que danos possam ser contidos.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 226.0, middle: 0.4992),
-            Pin(size: 57.0, middle: 0.7163),
-            child: Text(
-              'Como reduzir\n               esse uso?',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 16.0, start: 18.6),
-            Pin(size: 16.0, middle: 0.0391),
-            child: Transform.rotate(
-              angle: 3.1416,
-              child:
-                  // Adobe XD layer: 'Next' (group)
-                  PageLink(
-                links: [
-                  PageLinkInfo(
-                    transition: LinkTransition.Fade,
-                    ease: Curves.easeOut,
-                    duration: 0.3,
-                    pageBuilder: () => restaurante(),
-                  ),
-                ],
-                child: Stack(
-                  children: <Widget>[
-                    Pinned.fromPins(
-                      Pin(size: 16.0, middle: 0.5),
-                      Pin(size: 16.0, middle: 0.5),
-                      child:
-                          // Adobe XD layer: 'Symbol 18 – 1' (grid)
-                          Scrollbar(
-                        child: SingleChildScrollView(
-                          child: Wrap(
-                            alignment: WrapAlignment.center,
-                            spacing: 20,
-                            runSpacing: 20,
-                            children: [{}].map((itemData) {
-                              return SizedBox(
-                                width: 16.0,
-                                height: 16.0,
-                                child:
-                                    // Adobe XD layer: 'Symbol 18 – 1' (group)
-                                    Stack(
-                                  children: <Widget>[
-                                    Pinned.fromPins(
-                                      Pin(start: 0.0, end: 0.0),
-                                      Pin(start: 0.0, end: 0.0),
-                                      child:
-                                          // Adobe XD layer: 'Path 10' (shape)
-                                          SvgPicture.string(
-                                        _svg_ru0g9a,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  textAlign: TextAlign.center,
                 ),
               ),
+
+              SizedBox(height: 30,),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 28,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => restauranterorganicosdicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_p4c,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.scaleDown,
             ),
           ),
+          SizedBox(height: 30,),
         ],
       ),
     );

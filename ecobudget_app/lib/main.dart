@@ -1,3 +1,4 @@
+
 import 'package:ecobudget_app/casa/agua/casaagua.dart';
 import 'package:ecobudget_app/casa/casa.dart';
 import 'package:ecobudget_app/casa/luz/casaenergia.dart';
@@ -9,6 +10,7 @@ import 'package:ecobudget_app/economica/AEENERGIA.dart';
 import 'package:ecobudget_app/economica/AEGUA.dart';
 import 'package:ecobudget_app/economica/ANLISEECONOMICA.dart';
 import 'package:ecobudget_app/escola/agua/escolagua.dart';
+import 'package:ecobudget_app/escola/escola.dart';
 import 'package:ecobudget_app/escola/luz/escolaenergia.dart';
 import 'package:ecobudget_app/escola/luz/escolaenergiadicas1.dart';
 import 'package:ecobudget_app/escola/residuos_inorganicos/escolarinoranicos.dart';
@@ -19,6 +21,11 @@ import 'package:ecobudget_app/escola/residuos_organicos/escolarorganicosdicas1.d
 import 'package:ecobudget_app/infos/sobreInovaMaua.dart';
 import 'package:ecobudget_app/infos/sobrerecursos.dart';
 import 'package:ecobudget_app/menu/home.dart';
+import 'package:ecobudget_app/restaurante/agua/restauranteagua.dart';
+import 'package:ecobudget_app/restaurante/luz/restauranteenergia.dart';
+import 'package:ecobudget_app/restaurante/residuos_inorganicos/restauranterinorgnicos.dart';
+import 'package:ecobudget_app/restaurante/residuos_organicos/restauranterorganicos.dart';
+import 'package:ecobudget_app/restaurante/restaurante.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,7 +37,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: home(),
+      home:home(),
     );
   }
 }

@@ -1,3 +1,6 @@
+import 'package:ecobudget_app/restaurante/luz/restauranteenergia.dart';
+import 'package:ecobudget_app/restaurante/residuos_inorganicos/restauranterinorgnicos.dart';
+import 'package:ecobudget_app/restaurante/residuos_organicos/restauranterorganicos.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'agua/restauranteagua.dart';
@@ -11,202 +14,182 @@ class restaurante extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
-        children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: 22.0, end: 8.0),
-            Pin(size: 241.0, middle: 0.4104),
-            child: Scrollbar(
-              child: SingleChildScrollView(
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  spacing: 21,
-                  runSpacing: 16,
-                  children: [
-                    {
-                      'text': 'Água',
-                    },
-                    {
-                      'text': 'Energia\n',
-                    },
-                    {
-                      'text': 'R. Orgânicos',
-                    },
-                    {
-                      'text': 'R. Inorgânicos',
-                    }
-                  ].map((itemData) {
-                    final text = itemData['text'];
-                    return SizedBox(
-                      width: 149.0,
-                      height: 93.0,
-                      child: Stack(
-                        children: <Widget>[
-                          Pinned.fromPins(
-                            Pin(start: 0.0, end: 0.0),
-                            Pin(start: 0.0, end: 0.0),
-                            child:
-                                // Adobe XD layer: 'AGUA' (shape)
-                                PageLink(
-                              links: [
-                                PageLinkInfo(
-                                  transition: LinkTransition.Fade,
-                                  ease: Curves.easeOut,
-                                  duration: 0.3,
-                                  pageBuilder: () => restauranteagua(),
-                                ),
-                              ],
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  image: DecorationImage(
-                                    image: const AssetImage(''),
-                                    fit: BoxFit.cover,
-                                    colorFilter: new ColorFilter.mode(
-                                        Colors.black.withOpacity(0.6),
-                                        BlendMode.dstIn),
-                                  ),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0x99707070)),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Pinned.fromPins(
-                            Pin(size: 44.0, start: 8.0),
-                            Pin(size: 24.0, end: 5.0),
-                            child: Text(
-                              text!,
-                              style: TextStyle(
-                                fontFamily: 'Segoe UI',
-                                fontSize: 18,
-                                color: const Color(0xfffbf7ff),
-                                fontWeight: FontWeight.w700,
-                              ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ],
+        appBar: AppBar(
+          backgroundColor: Color(0xff236068),
+          title: Text("Restaurante"),
+          centerTitle: true,
+          leading: BackButton(onPressed: (){Navigator.pop(context);},),
+        ),
+        backgroundColor: const Color(0xffd7eaf9),
+        body: Column(
+            children: <Widget>[
+              SizedBox(height: 70,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.values[4],
+                children: [
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return restauranteagua();
+                        }));
+                      },
+                        icon: Image.asset('assets/images/economize_agua.png'),
+                        iconSize: 100,),
+                      Text('Água', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return restauranteenergia();
+                        }));
+                      },
+                        icon: Image.asset('assets/images/eco_light.png'),
+                        iconSize: 100,),
+                      Text('Energia',style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),)
+                    ],
+                  ),
+
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.values[4],
+                children: [
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return restauranterinorgnicos();
+                          }));
+                        },
+                        icon: Image.asset('assets/images/garbage.png'),
+                        iconSize: 100,
                       ),
-                    );
-                  }).toList(),
-                ),
+                      Text(
+                        'R.Inorgânicos',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return restauranterorganicos();
+                          }));
+                        },
+                        icon: Image.asset('assets/images/organic_food.png'),
+                        iconSize: 100,
+                      ),
+                      Text(
+                        'R.Orgânicos',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 33.0, end: 33.0),
-            Pin(size: 54.0, middle: 0.6955),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => sobrerecursos(),
+              SizedBox(height: 50,),
+              Column(children: [
+                Container(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned.fill(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: <Color>[
+                                  Color(0xFF00695c),
+                                  Color(0xFF009688),
+                                  Color(0xFF4db6ac),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.white,
+                            textStyle: const TextStyle(fontSize: 24),
+                          ),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return sobrerecursos();
+                            }));
+                          },
+                          child: const Text('Sobre Recursos'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  height: 60,
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Color(0xff236068),
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                ),
+                Container(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned.fill(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: <Color>[
+                                  Color(0xFF00695c),
+                                  Color(0xFF009688),
+                                  Color(0xFF4db6ac),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.white,
+                            textStyle: const TextStyle(fontSize: 20),
+                          ),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return ANLISEECONOMICA();
+                            }));
+                          },
+                          child: const Text('Análise Econômica'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  height: 60,
+                  margin: EdgeInsets.all(10),
+
                 ),
               ],
-              child: SvgPicture.string(
-                _svg_ylfsas,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 172.0, middle: 0.5),
-            Pin(size: 30.0, middle: 0.689),
-            child: Text(
-              'Sobre os recursos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 22,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 200.4, start: 33.0),
-            Pin(size: 54.6, middle: 0.8185),
-            child: SvgPicture.string(
-              _svg_hqyae9,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 33.0, end: 33.0),
-            Pin(size: 54.0, middle: 0.8258),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(31.0),
-                color: const Color(0xff236068),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 28.0, end: 28.0),
-            Pin(size: 71.0, end: 98.0),
-            child: Text(
-              'Análise econômica',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 22,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 200.4, start: 33.0),
-            Pin(size: 54.6, middle: 0.8185),
-            child: SvgPicture.string(
-              _svg_hqyae9,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 33.0, end: 33.0),
-            Pin(size: 54.0, middle: 0.8258),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(31.0),
-                color: const Color(0xff236068),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 28.0, end: 28.0),
-            Pin(size: 71.0, end: 98.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => ANLISEECONOMICA(),
-                ),
-              ],
-              child: Text(
-                'Análise econômica',
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 22,
-                  color: const Color(0xfffbe9ff),
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-        ],
-      ),
+            ]
+        )
     );
   }
 }
