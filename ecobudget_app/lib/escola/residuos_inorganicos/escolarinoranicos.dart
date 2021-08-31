@@ -14,6 +14,13 @@ class escolarinoranicos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Container(
+            child: Icon(Icons.school,
+              size: 40,color: Colors.white,),
+            width: 60,
+            height: 60,),
+        ],
         title: Text("Resíduos Inorgânicos"),
         centerTitle: true,
         backgroundColor: Color(0xff236068),

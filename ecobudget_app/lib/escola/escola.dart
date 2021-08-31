@@ -15,6 +15,13 @@ class escola extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [
+            Container(
+              child: Icon(Icons.school,
+                size: 40,color: Colors.white,),
+              width: 60,
+              height: 60,),
+          ],
           backgroundColor: Color(0xff236068),
           title: Text("Escola"),
           centerTitle: true,

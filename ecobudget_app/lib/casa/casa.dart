@@ -15,10 +15,18 @@ class casa extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Container(
+              child: Icon(Icons.house_rounded,
+                size: 40,color: Colors.white,),
+            width: 60,
+            height: 60,),
+        ] ,
         backgroundColor: Color(0xff236068),
         title: Text("Casa"),
         centerTitle: true,
         leading: BackButton(onPressed: (){Navigator.pop(context);},),
+
       ),
       backgroundColor: const Color(0xffd7eaf9),
       body: Column(
@@ -91,7 +99,7 @@ class casa extends StatelessWidget {
                         return casarorganicos();
                       }));
                     },
-                    icon: Image.asset('assets/images/organic_food.png'),
+                    icon: Image.asset("assets/images/ogcontornada.png"),
                     iconSize: 100,
                   ),
                   Text(

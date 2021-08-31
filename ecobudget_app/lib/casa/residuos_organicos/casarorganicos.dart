@@ -15,6 +15,13 @@ class casarorganicos extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffd7eaf9),
       appBar: AppBar(
+        actions: [
+          Container(
+            child: Icon(Icons.house_rounded,
+              size: 40,color: Colors.white,),
+            width: 60,
+            height: 60,),
+        ] ,
         title: Text("Resíduos Orgânicos"),
         centerTitle: true,
         backgroundColor: Color(0xff236068),
