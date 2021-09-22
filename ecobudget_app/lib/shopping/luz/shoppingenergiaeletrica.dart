@@ -1,3 +1,6 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/shopping/luz/shoppingenergiadicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import '../SHOPPING.dart';
@@ -10,132 +13,95 @@ class shoppingenergiaeletrica extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      appBar: AppBar(
+        actions: [
+          Container(
+            child: Icon(Icons.shopping_basket,
+              size: 40,color: Colors.white,),
+            width: 60,
+            height: 60,),
+        ] ,
+        title: Text("Energia"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+      ),
+      backgroundColor:  const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 136.0, middle: 0.5),
-            Pin(size: 22.0, start: 102.0),
-            child: Text(
-              'Introdução',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 20,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(20,'\nINTRODUÇÃO' , 'Arial'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: textoformatado(20,'Por unir muitas opções de consumo e entretenimento, os shoppings recebem cerca de 400 milhões de visitantes por ano. Dessa forma, têm um alto gasto de energia elétrica com luzes e ares condicionados. ' ),
               ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 115.0, middle: 0.502),
-            Pin(size: 47.0, start: 11.0),
-            child: Text(
-              'Energia',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 4.0, end: 4.0),
-            Pin(size: 195.0, middle: 0.2313),
-            child: Text(
-              'Por unir muitas opções de consumo e entretenimento, os shoppings recebem cerca de 400 milhões de visitantes por ano. Dessa forma, têm um alto gasto de energia elétrica com luzes e ares condicionados. ',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 24.0, end: 23.0),
-            Pin(size: 228.0, middle: 0.5255),
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 17,
-                  color: const Color(0xffffffff),
+              SizedBox(height: 50,),
+              Container(
+                height: 180,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-                children: [
+                child: Text.rich(
                   TextSpan(
-                    text: ' ',
-                  ),
-                  TextSpan(
-                    text: 'Curiosidade:',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Segoe UI',
+                      fontSize: 17,
+                      color: const Color(0xffffffff),
                     ),
-                  ),
-                  TextSpan(
-                    text:
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
                         ' Você sabia que os visitantes passam em média 73 minutos no shopping, o que gera um consumo de energia elétrica em cerca de 1,75 kWh por pessoa? Mas há inúmeras medidas que podem ser tomadas para reduzir esse uso, o que proporcionará grandes benefícios ambientais e economia na conta de energia.\n',
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              textHeightBehavior:
+                  textHeightBehavior:
                   TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 226.0, middle: 0.4925),
-            Pin(size: 57.0, middle: 0.7468),
-            child: Text(
-              'Como reduzir\n               esse uso?',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.5015),
-            Pin(size: 30.0, middle: 0.8211),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => Shoppingenergiadicas(),
+                  textAlign: TextAlign.center,
                 ),
-              ],
-              child: SvgPicture.string(
-                _svg_l1puj,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
               ),
+
+              SizedBox(height: 55.0,),
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 30,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => Shoppingenergiadicas(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_l1puj,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
-          Pinned.fromPins(
-            Pin(start: -142.0, end: -1316.0),
-            Pin(size: 41.0, end: -14.0),
-            child: Text(
-              '',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 22,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
+
         ],
       ),
     );

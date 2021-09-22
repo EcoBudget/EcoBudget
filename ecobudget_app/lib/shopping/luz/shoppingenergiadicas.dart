@@ -1,3 +1,7 @@
+import 'package:ecobudget_app/models/bordaamarela.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/shopping/agua/shoppingguadicas2.dart';
+import 'package:ecobudget_app/shopping/luz/shoppingenergiadicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
@@ -6,54 +10,38 @@ class Shoppingenergiadicas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text("Novas Atitudes"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return shoppingenergiadicas2();
+              }));
+            },
+            icon: Icon(Icons.arrow_forward),
+            tooltip: 'Mudanças Estruturais',
+          ),
+        ],
+      ),
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      body: ListView(
         children: <Widget>[
-          Container(),
-          Container(),
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 38.0, end: 37.0),
-            Pin(size: 101.0, middle: 0.3556),
-            child: Text(
-              ' Instalar claraboias e fazer aberturas de vãos entre as paredes para iluminação natural, para que durante o dia possa economizar com lâmpadas ligadas, ou até mesmo reduzir a quantidade em uso.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 44.0, end: 44.0),
-            Pin(size: 100.0, middle: 0.1787),
-            child: Text(
-              ' Instalação de painéis fotovoltaicos, além de amigáveis ao meio ambiente, reduzem o custo mensal da conta de luz, se pagando no longo prazo',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 36.0, end: 36.0),
-            Pin(size: 97.0, middle: 0.559),
-            child: Text(
-              ' Utilização de geradores, dados comprovam que em médias e grandes empresas podem economizar até 30% na conta do fim mês com o uso destes.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Container(),
+          tituloformatado(19, '\nIluminação', 'Segoe UI'),
+          bordaamarela(90,'\nTroca de lâmpadas convencionais por LED, em média, essas lâmpadas utilizam aproximadamente 85% de energia a menos do que as convencionais.' , 15),
+          bordaamarela(50,' \nInstalar sensores de luz nos banheiros.' , 15),
+          bordaamarela(50,' \nInstalação e uso de painéis solares.' , 15),
+          tituloformatado(19, '\nManutenção', 'Segoe UI'),
+          bordaamarela(90,'\nManter uma rotina de manutenção dos equipamentos para que a vida útil do aparelho seja aumentada e reduza o consumo de energia.' , 15),
+
+          
         ],
       ),
     );

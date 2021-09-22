@@ -1,4 +1,6 @@
 import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas1.dart';
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import '../SHOPPING.dart';
@@ -10,133 +12,95 @@ class shoppinginorganicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      appBar: AppBar(
+        actions: [
+          Container(
+            child: Icon(Icons.shopping_basket,
+              size: 40,color: Colors.white,),
+            width: 60,
+            height: 60,),
+        ],
+        title: Text("Resíduos Inorgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(onPressed: (){Navigator.pop(context);},),
+      ),
+      backgroundColor:  const Color(0xffd7eaf9),
+      body: Column(
         children: <Widget>[
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 130.0, middle: 0.5),
-            Pin(size: 28.0, start: 105.0),
-            child: Text(
-              'Introdução',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(20,'\nINTRODUÇÃO' , 'Arial'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: textoformatado(17,'Os resíduos inorgânicos de shoppings, em sua maioria são embalagens plásticas vindas de lojas e até mesmo restaurantes, papéis utilizados em algumas refeições, latinhas de refrigerante consumidas no local, e com essa ampla variedade de resíduos sendo descartados incorretamente, podem causar danos ambientais a longo prazo, pelo longo período de decomposição que esses materiais possuem. Portanto, é necessário agir com algumas medidas simples para que todos se conscientizem dos danos e façam a diferença! \n'  ),
               ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 0.0, start: 66.0),
-            Pin(size: 0.0, start: 49.0),
-            child: Text(
-              '',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 218.0, middle: 0.5),
-            Pin(size: 47.0, start: 16.0),
-            child: Text(
-              'R. Inorgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 12.0, end: 11.0),
-            Pin(size: 293.0, start: 151.0),
-            child: Scrollbar(
-              child: SingleChildScrollView(
-                child: Text(
-                  'Os resíduos inorgânicos de shoppings, em sua maioria são embalagens plásticas vindas de lojas e até mesmo restaurantes, papéis utilizados em algumas refeições, latinhas de refrigerante consumidas no local, e com essa ampla variedade de resíduos sendo descartados incorretamente, podem causar danos ambientais a longo prazo, pelo longo período de decomposição que esses materiais possuem. Portanto, é necessário agir com algumas medidas simples para que todos se conscientizem dos danos e façam a diferença! \n',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 17,
-                    color: const Color(0xff1c3649),
+
+              Container(
+                height: 180,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
+                ),
+                child: Text.rich(
+                  TextSpan(
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 16,
+                      color: const Color(0xfffbe9ff),
+                    ),
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                        'De acordo com ABRASCE, 92% dos shoppings realizam a coleta seletiva de 20 mil toneladas de lixo por mês, mas apenas 35% realizam a logística reversa, que vem a ser ações que a empresa faz para retornar uma embalagem para a fábrica tendo a possibilidade de um descarte correto, portanto, ainda há a necessidade da ação desses empreendimentos para que mais embalagens possam ser reutilizadas.',
+                      ),
+                    ],
                   ),
+                  textHeightBehavior:
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
                   textAlign: TextAlign.center,
                 ),
               ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 226.0, middle: 0.5),
-            Pin(size: 57.0, middle: 0.7801),
-            child: Text(
-              'Como reduzir\n               esse uso?',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 16.0, end: 16.0),
-            Pin(size: 230.0, middle: 0.6197),
-            child: Text.rich(
-              TextSpan(
+
+              SizedBox(height: 20.0,),
+              Text(
+                'Como reduzir\n               esse uso?',
                 style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 15,
-                  color: const Color(0xffffffff),
+                  fontFamily: 'Arial',
+                  fontSize: 28,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
                 ),
-                children: [
-                  TextSpan(
-                    text: 'Curiosidade:',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  TextSpan(
-                    text:
-                        ' De acordo com ABRASCE, 92% dos shoppings realizam a coleta seletiva de 20 mil toneladas de lixo por mês, mas apenas 35% realizam a logística reversa, que vem a ser ações que a empresa faz para retornar uma embalagem para a fábrica tendo a possibilidade de um descarte correto, portanto, ainda há a necessidade da ação desses empreendimentos para que mais embalagens possam ser reutilizadas.',
-                  ),
-                ],
+                textAlign: TextAlign.left,
               ),
-              textHeightBehavior:
-                  TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
+
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => geralrinorgnicosdicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_svnf84,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
             ),
           ),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.469),
-            Pin(size: 30.0, end: 161.0),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => geralrinorgnicosdicas1(),
-                ),
-              ],
-              child: SvgPicture.string(
-                _svg_svnf84,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
+
         ],
       ),
     );

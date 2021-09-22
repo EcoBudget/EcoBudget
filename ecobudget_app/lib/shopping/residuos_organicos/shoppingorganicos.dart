@@ -1,3 +1,5 @@
+import 'package:ecobudget_app/models/textoformatado.dart';
+import 'package:ecobudget_app/models/tituloformatado.dart';
 import 'package:ecobudget_app/shopping/residuos_organicos/shoppingorgnicodicas1.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
@@ -11,126 +13,97 @@ class shoppingorganicos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffd7eaf9),
-      body: Stack(
+      appBar: AppBar(
+        actions: [
+          Container(
+            child: Icon(Icons.shopping_basket,
+              size: 40,color: Colors.white,),
+            width: 60,
+            height: 60,),
+        ],
+        title: Text("Resíduos Orgânicos"),
+        centerTitle: true,
+        backgroundColor: Color(0xff236068),
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: ListView(
         children: <Widget>[
-          Container(),
-          Container(),
-          Container(),
-          Pinned.fromPins(
-            Pin(size: 226.0, middle: 0.5),
-            Pin(size: 57.0, middle: 0.7283),
-            child: Text(
-              'Como reduzir\n               esse uso?',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
+          // Adobe XD layer: 'Posts' (group)
+          Column(
+            children: <Widget>[
+              // Adobe XD layer: 'Posts' (group)
+
+              tituloformatado(28, '\nINTRODUÇÃO', 'Arial'),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: textoformatado(17,
+                    'Com o grande número de shoppings centers no Brasil, é inevitável um alto consumo de resíduos, destacando-se os resíduos orgânicos advindos das praças de alimentação, podendo chegar a toneladas em um único shopping.'),
               ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 0.0, start: 44.0),
-            Pin(size: 0.0, middle: 0.2855),
-            child: Text(
-              '',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 21.0, middle: 0.469),
-            Pin(size: 30.0, middle: 0.8096),
-            child:
-                // Adobe XD layer: 'Icon material-light…' (shape)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => shoppingorgnicodicas1(),
+
+              Container(
+                height: 110,
+                decoration: BoxDecoration(
+                  color: Color(0xff236068),
                 ),
-              ],
-              child: SvgPicture.string(
-                _svg_rizo4i,
-                allowDrawingOutsideViewBox: true,
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 194.0, middle: 0.5),
-            Pin(size: 47.0, start: 14.0),
-            child: Text(
-              'R. Orgânicos',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 35,
-                color: const Color(0xfffbe9ff),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 24.0, end: 24.0),
-            Pin(size: 171.0, middle: 0.2598),
-            child: Text(
-              'Com o grande número de shoppings centers no Brasil, é inevitável um alto consumo de resíduos, destacando-se os resíduos orgânicos advindos das praças de alimentação, podendo chegar a toneladas em um único shopping.',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 17,
-                color: const Color(0xff1c3649),
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 129.0, middle: 0.5022),
-            Pin(size: 28.0, start: 103.0),
-            child: Text(
-              'Introdução',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 25,
-                color: const Color(0xff1c3649),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(),
-          Pinned.fromPins(
-            Pin(start: 15.0, end: 13.0),
-            Pin(size: 119.0, middle: 0.5289),
-            child: Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  fontSize: 17,
-                  color: const Color(0xffffffff),
-                ),
-                children: [
+                child: Text.rich(
                   TextSpan(
-                    text: 'Curiosidade:',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Segoe UI',
+                      fontSize: 18,
+                      color: const Color(0xffffffff),
                     ),
-                  ),
-                  TextSpan(
-                    text:
+                    children: [
+                      TextSpan(
+                        text: '\nCuriosidade:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
                         ' O shopping Eldorado, por exemplo, diz produzir mensalmente uma quantia estimada de 60 toneladas de lixo orgânico, sendo capaz de reciclar e reutilizar 80% do total.',
+                      ),
+                    ],
                   ),
-                ],
+                  textHeightBehavior: TextHeightBehavior(
+                      applyHeightToFirstAscent: false),
+                  textAlign: TextAlign.center,
+                ),
               ),
-              textHeightBehavior:
-                  TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.center,
+              SizedBox(height: 40,),
+
+              Text(
+                'Como reduzir\n               esse uso?',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 28,
+                  color: const Color(0xff1c3649),
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ],
+          ),
+
+          // Adobe XD layer: 'Icon material-light…' (shape)
+          PageLink(
+            links: [
+              PageLinkInfo(
+                transition: LinkTransition.Fade,
+                ease: Curves.easeOut,
+                duration: 0.3,
+                pageBuilder: () => shoppingorgnicodicas1(),
+              ),
+            ],
+            child: SvgPicture.string(
+              _svg_rizo4i,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.scaleDown,
             ),
           ),
         ],
