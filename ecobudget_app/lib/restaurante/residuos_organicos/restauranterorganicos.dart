@@ -44,16 +44,16 @@ class restauranterorganicos extends StatelessWidget {
                 child: textoformatado(17,
                     'Os resíduos orgânicos podem ser definidos como restos de animais ou vegetais decorrentes de atividades humanas. O Brasil gera, diariamente, cerca de 100 mil toneladas de lixo, sendo a maior parte é constituída de material orgânico. Do total, apenas 1% deste resíduo é aproveitado para a reciclagem. \nÉ de extrema importância que os restaurantes tenham conhecimento a respeito de seu correto direcionamento para que danos possam ser contidos.'),
               ),
-
               Container(
+                height: 100,
                 decoration: BoxDecoration(
                   color: Color(0xff236068),
                 ),
                 child: Text(
-                  '',
+                  '\nCuriosidade: Os resíduos orgânicos correspondem a mais de 50% do total de resíduos sólidos urbanos gerados no Brasil.',
                   style: TextStyle(
                     fontFamily: 'Segoe UI',
-                    fontSize: 15,
+                    fontSize: 17,
                     color: const Color(0xfff9f9f9),
                   ),
                   textAlign: TextAlign.center,

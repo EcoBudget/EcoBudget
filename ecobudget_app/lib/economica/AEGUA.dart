@@ -105,7 +105,7 @@ class AEGUA extends StatelessWidget {
 
 
               Text(
-                'Desperdícios com vasamentos',
+                'Desperdícios com vazamentos',
                 style: TextStyle(
                   fontFamily: 'Segoe UI',
                   fontSize: 17,

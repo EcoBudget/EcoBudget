@@ -51,7 +51,7 @@ class restauranteagua extends StatelessWidget {
                   color: Color(0xff236068),
                 ),
                 child: Text(
-                  ' \nVocê sabia que coisas muito pequenas podem causar impactos gigantescos? Por exemplo, um furo de apenas 1mm pode causar um prejuízo de 62 mil litros por mês, causando um prejuízo de até 1082,52 reais.',
+                  ' \nCuriosidade: Você sabia que coisas muito pequenas podem causar impactos gigantescos? Por exemplo, um furo de apenas 1mm pode causar um prejuízo de 62 mil litros por mês, causando um prejuízo de até 1082,52 reais.',
                   style: TextStyle(
                     fontFamily: 'Segoe UI',
                     fontSize: 15,

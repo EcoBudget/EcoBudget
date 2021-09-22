@@ -62,7 +62,7 @@ class restauranterinorgnicos extends StatelessWidget {
                       ),
                       TextSpan(
                         text:
-                        ': cerca de 40% do lixo gerado pelas escolas seja “seco”, ou seja, potencialmente reciclável. Assim sendo, sua correta gestão é fundamental, tanto para exemplo às crianças como para o bem-estar do planeta.',
+                        ': cerca de 40% do lixo gerado pelas escolas é “seco”, ou seja, potencialmente reciclável. Assim sendo, sua correta gestão é fundamental, tanto para exemplo às crianças como para o bem-estar do planeta.',
                       ),
                     ],
                   ),
@@ -86,6 +86,7 @@ class restauranterinorgnicos extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20,),
           PageLink(
             links: [
               PageLinkInfo(

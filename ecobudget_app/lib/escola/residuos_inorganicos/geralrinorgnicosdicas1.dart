@@ -52,7 +52,7 @@ class geralrinorgnicosdicas1 extends StatelessWidget {
               15),
           bordaamarela(
               200,
-              '\nNão pegue um copo de plástico para \ntomar um gole de água e jogar fora. \nEle demora anos para se decompor. \nOpte por garrafinhas. Carregue a sua sempre enche-a sempre que\nnecessário. Esqueça de vez de copos, pratos e talheres descartáveis. \nSempre dê preferência a itens com maior \nvida útil e menos prejudiciais à saúde.',
+              '\nNão pegue um copo de plástico para \ntomar um gole de água e jogar fora. \nEle demora anos para se decompor. \nOpte por garrafinhas. Carregue a sua, encha-a sempre que\nnecessário. Esqueça de vez de copos, pratos e talheres descartáveis. \nSempre dê preferência a itens com maior \nvida útil e menos prejudiciais à saúde.',
               15),
           tituloformatado(19, 'Conscientização', 'Segoe UI'),
           bordaamarela(
