@@ -3,6 +3,7 @@ import 'package:ecobudget_app/models/botaoverde.dart';
 import 'package:ecobudget_app/models/containerverde.dart';
 import 'package:ecobudget_app/restaurante/restaurante.dart';
 import 'package:ecobudget_app/shopping/SHOPPING.dart';
+import 'package:ecobudget_app/supermercado/supermercado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/widgets.dart';
@@ -33,7 +34,7 @@ class home extends StatelessWidget {
             SizedBox(height: 20,),
             botaoverde('\nSHOPPING', 20, SHOPPING() ),
             SizedBox(height: 20,),
-            botaoverde('\nSUPERMERCADO', 20, escola() ),
+            botaoverde('\nSUPERMERCADO', 20, supermercado() ),
 
             Row(
               children: [
