@@ -1,5 +1,6 @@
-import 'package:ecobudget_app/models/bordaamarela.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+
+import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:ecobudget_app/supermercado/agua/supermercado_aguadicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';

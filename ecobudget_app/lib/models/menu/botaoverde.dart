@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'containerverde.dart';
+import '../introducao/containerverde.dart';
 
 class botaoverde extends StatelessWidget {
   final String texto;

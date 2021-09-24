@@ -1,6 +1,6 @@
 import 'package:ecobudget_app/escola/escola.dart';
-import 'package:ecobudget_app/models/botaoverde.dart';
-import 'package:ecobudget_app/models/containerverde.dart';
+import 'package:ecobudget_app/models/menu/botaoverde.dart';
+import 'package:ecobudget_app/models/introducao/containerverde.dart';
 import 'package:ecobudget_app/restaurante/restaurante.dart';
 import 'package:ecobudget_app/shopping/SHOPPING.dart';
 import 'package:ecobudget_app/supermercado/supermercado.dart';

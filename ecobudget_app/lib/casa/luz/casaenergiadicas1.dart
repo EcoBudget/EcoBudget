@@ -1,11 +1,9 @@
 import 'package:ecobudget_app/casa/luz/casaenergiadicas2.dart';
-import 'package:ecobudget_app/models/bordaamarela.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-
 class casaenergiadicas1 extends StatelessWidget {
-  //casaenergiadicas1({Key key,}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

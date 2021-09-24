@@ -1,7 +1,7 @@
 import 'package:ecobudget_app/escola/agua/escolagua.dart';
 import 'package:ecobudget_app/escola/agua/escolaguadicas2.dart';
-import 'package:ecobudget_app/models/bordaamarela.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 

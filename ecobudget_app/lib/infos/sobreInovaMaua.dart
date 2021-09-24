@@ -1,12 +1,12 @@
-import 'package:ecobudget_app/models/textoformatado.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/textoformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import '../menu/home.dart';
 import 'package:adobe_xd/page_link.dart';
 
 class sobreInovaMaua extends StatelessWidget {
-  //sobreInovaMaua({Key key,}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

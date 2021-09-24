@@ -1,12 +1,9 @@
 import 'package:ecobudget_app/escola/residuos_organicos/escolarorganicosdicas2.dart';
-import 'package:ecobudget_app/models/bordaamarela.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class escolarorganicosdicas1 extends StatelessWidget {
-  //escolarorganicosdicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

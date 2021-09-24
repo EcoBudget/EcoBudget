@@ -1,10 +1,11 @@
-import 'package:ecobudget_app/models/bordaamarela.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+
+import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
 class casaaguadicas2 extends StatelessWidget {
-  //casaaguadicas2({Key key,}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

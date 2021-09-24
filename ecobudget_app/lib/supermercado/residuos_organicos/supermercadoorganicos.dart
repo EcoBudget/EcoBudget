@@ -1,5 +1,6 @@
-import 'package:ecobudget_app/models/textoformatado.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/textoformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
+
 import 'package:ecobudget_app/supermercado/residuos_organicos/supermercado_organicodicas2.dart';
 import 'package:ecobudget_app/supermercado/residuos_organicos/supermercado_organicosdica.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,5 @@
-import 'package:ecobudget_app/models/textoformatado.dart';
-import 'package:ecobudget_app/models/tituloformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/textoformatado.dart';
+import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:ecobudget_app/supermercado/luz/supermercado_energiadicas.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
