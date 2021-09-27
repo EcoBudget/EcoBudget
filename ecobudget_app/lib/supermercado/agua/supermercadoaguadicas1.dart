@@ -1,12 +1,11 @@
 
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
-import 'package:ecobudget_app/shopping/agua/shoppingguadicas2.dart';
-import 'package:ecobudget_app/shopping/luz/shoppingenergiadicas2.dart';
+import 'package:ecobudget_app/supermercado/agua/supermercadoaguadicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class Shoppingenergiadicas extends StatelessWidget {
+class supermercadoaguadicas1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class Shoppingenergiadicas extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return shoppingenergiadicas2();
+                return supermercadoaguadicas2();
               }));
             },
             icon: Icon(Icons.arrow_forward),
@@ -35,14 +34,12 @@ class Shoppingenergiadicas extends StatelessWidget {
       backgroundColor: const Color(0xffd7eaf9),
       body: ListView(
         children: <Widget>[
-          tituloformatado(19, '\nIluminação', 'Segoe UI'),
-          bordaamarela(90,'\nTroca de lâmpadas convencionais por LED, em média, essas lâmpadas utilizam aproximadamente 85% de energia a menos do que as convencionais.' , 15),
-          bordaamarela(50,' \nInstalar sensores de luz nos banheiros.' , 15),
-          bordaamarela(50,' \nInstalação e uso de painéis solares.' , 15),
-          tituloformatado(19, '\nManutenção', 'Segoe UI'),
-          bordaamarela(90,'\nManter uma rotina de manutenção dos equipamentos para que a vida útil do aparelho seja aumentada e reduza o consumo de energia.' , 15),
+          tituloformatado(19,'\nAtitudes Conscientizadoras' , 'Segoe UI'),
+          bordaamarela(110, '\nDirecionar toda a água usada no supermercado para as estações de tratamento de águas cinzas que vão ser tratadas e devolvidas para serem reaproveitadas e usadas novamente', 15),
+          bordaamarela(90,'\nÉ importante checar se há vazamento nos canos, pois um cano com furo de 1 milímetro pode gerar um gasto de 62.000 litros de água por mês.' , 15),
+          bordaamarela(90,' \nColetar água das chuvas, pois pode ser usada na limpeza de locais como o banheiro ou a cozinha e para regar plantas presentes no ambiente.' , 15),
 
-          
+
         ],
       ),
     );

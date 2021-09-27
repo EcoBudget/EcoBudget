@@ -1,6 +1,6 @@
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
-import '../../models/introducao/tela_introducao.dart';
+import '../../models/introducao/telaintroducao.dart';
 import 'casarorganicosdicas1.dart';
 
 class casarorganicos extends StatelessWidget {

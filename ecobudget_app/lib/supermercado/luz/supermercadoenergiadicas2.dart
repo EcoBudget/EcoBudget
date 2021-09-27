@@ -3,7 +3,7 @@ import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class supermercado_energiadicas2 extends StatelessWidget {
+class supermercadoenergiadicas2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

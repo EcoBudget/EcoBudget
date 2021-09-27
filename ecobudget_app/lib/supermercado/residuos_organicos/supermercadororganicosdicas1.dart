@@ -1,11 +1,11 @@
 
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
-import 'package:ecobudget_app/supermercado/residuos_organicos/supermercado_organicodicas2.dart';
+import 'package:ecobudget_app/supermercado/residuos_organicos/supermercadororganicosdicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class supermercado_organicosdica extends StatelessWidget {
+class supermercadororganicosdicas1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class supermercado_organicosdica extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return supermercado_organicodicas2();
+                return supermercadororganicodicas2();
               }));
             },
             icon: Icon(Icons.arrow_forward),

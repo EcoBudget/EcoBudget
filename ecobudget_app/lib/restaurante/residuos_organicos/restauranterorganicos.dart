@@ -1,4 +1,4 @@
-import 'package:ecobudget_app/models/introducao/tela_introducao.dart';
+import 'package:ecobudget_app/models/introducao/telaintroducao.dart';
 import 'package:ecobudget_app/models/telas_genericas/textoformatado.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';

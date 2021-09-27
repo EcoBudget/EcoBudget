@@ -4,8 +4,8 @@ import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class escolaguadicas2 extends StatelessWidget {
-  //escolaguadicas2({Key key,}) : super(key: key);
+class escolaaguadicas2 extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

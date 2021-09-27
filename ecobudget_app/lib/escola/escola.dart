@@ -1,4 +1,4 @@
-import 'package:ecobudget_app/economica/ANLISEECONOMICA.dart';
+import 'package:ecobudget_app/economica/aemenu.dart';
 import 'package:ecobudget_app/escola/luz/escolaenergia.dart';
 import 'package:ecobudget_app/escola/residuos_inorganicos/escolarinoranicos.dart';
 import 'package:ecobudget_app/escola/residuos_organicos/escolarorganicos.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import '../infos/sobrerecursos.dart';
 import 'package:adobe_xd/page_link.dart';
-import 'agua/escolagua.dart';
+import 'agua/escolaagua.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class escola extends StatelessWidget {
@@ -38,7 +38,7 @@ class escola extends StatelessWidget {
                     children: [
                       IconButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return escolagua();
+                          return escolaagua();
                         }));
                       },
                         icon: Image.asset('assets/images/economize_agua.png'),
@@ -181,7 +181,7 @@ class escola extends StatelessWidget {
                           ),
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
-                              return ANLISEECONOMICA();
+                              return aemenu();
                             }));
                           },
                           child: const Text('Análise Econômica'),

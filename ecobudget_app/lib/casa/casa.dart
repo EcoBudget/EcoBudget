@@ -6,7 +6,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'agua/casaagua.dart';
 import 'package:adobe_xd/page_link.dart';
 import '../infos/sobrerecursos.dart';
-import '../economica/ANLISEECONOMICA.dart';
+import '../economica/aemenu.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class casa extends StatelessWidget {
@@ -182,7 +182,7 @@ class casa extends StatelessWidget {
                       ),
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return ANLISEECONOMICA();
+                          return aemenu();
                         }));
                       },
                       child: const Text('Análise Econômica'),

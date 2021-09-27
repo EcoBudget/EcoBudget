@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'ANLISEECONOMICA.dart';
-import 'package:adobe_xd/page_link.dart';
 
-class AEENERGIA extends StatelessWidget {
-  //AEENERGIA({Key key,}) : super(key: key);
+class aeenergia extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -84,5 +80,3 @@ class AEENERGIA extends StatelessWidget {
   }
 }
 
-const String _svg_ru0g9a =
-    '<svg viewBox="0.0 0.0 16.0 16.0" ><path  d="M 8 0 L 6.545454978942871 1.454545497894287 L 12.05194854736328 6.961039066314697 L 0 6.961039066314697 L 0 9.038961410522461 L 12.05194854736328 9.038961410522461 L 6.545454978942871 14.54545497894287 L 8 16 L 16 8 L 8 0 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';

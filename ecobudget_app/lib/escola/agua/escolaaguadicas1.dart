@@ -1,12 +1,12 @@
-import 'package:ecobudget_app/escola/agua/escolagua.dart';
-import 'package:ecobudget_app/escola/agua/escolaguadicas2.dart';
+import 'package:ecobudget_app/escola/agua/escolaagua.dart';
+import 'package:ecobudget_app/escola/agua/escolaaguadicas2.dart';
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class escolaguadicas1 extends StatelessWidget {
-  //escolaguadicas1({Key key,}) : super(key: key);
+class escolaaguadicas1 extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class escolaguadicas1 extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return escolaguadicas2();
+                return escolaaguadicas2();
               }));
             },
             icon: Icon(Icons.arrow_forward),

@@ -1,4 +1,4 @@
-import 'package:ecobudget_app/escola/residuos_inorganicos/geralrinorgnicosdicas2.dart';
+import 'package:ecobudget_app/inorg%C3%A2nicos_gerais/geralrinorganicosdicas2.dart';
 import 'package:ecobudget_app/menu/home.dart';
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
@@ -7,7 +7,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:adobe_xd/page_link.dart';
 
-class geralrinorgnicosdicas1 extends StatelessWidget {
+class geralrinorganicosdicas1 extends StatelessWidget {
   //geralrinorgnicosdicas1({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class geralrinorgnicosdicas1 extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return geralrinorgnicosdicas2();
+                return geralrinorganicosdicas2();
               }));
             },
             icon: Icon(Icons.arrow_forward),

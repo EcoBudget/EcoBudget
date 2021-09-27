@@ -3,10 +3,10 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../menu/home.dart';
 import 'package:adobe_xd/page_link.dart';
-import 'AEENERGIA.dart';
-import 'AEGUA.dart';
+import 'aeenergia.dart';
+import 'aeagua.dart';
 
-class ANLISEECONOMICA extends StatelessWidget {
+class aemenu extends StatelessWidget {
   //ANLISEECONOMICA({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class ANLISEECONOMICA extends StatelessWidget {
                   transition: LinkTransition.Fade,
                   ease: Curves.easeOut,
                   duration: 0.3,
-                  pageBuilder: () => AEGUA(),
+                  pageBuilder: () => aeagua(),
                 ),
               ],
               child: Container(
@@ -78,7 +78,7 @@ class ANLISEECONOMICA extends StatelessWidget {
                   transition: LinkTransition.Fade,
                   ease: Curves.easeOut,
                   duration: 0.3,
-                  pageBuilder: () => AEENERGIA(),
+                  pageBuilder: () => aeenergia(),
                 ),
               ],
               child: Container(

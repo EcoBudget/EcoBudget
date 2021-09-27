@@ -4,7 +4,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 
-class AEGUA extends StatelessWidget {
+class aeagua extends StatelessWidget {
   //AEGUA({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {

@@ -1,15 +1,15 @@
-import 'package:ecobudget_app/economica/ANLISEECONOMICA.dart';
+import 'package:ecobudget_app/economica/aemenu.dart';
 import 'package:ecobudget_app/infos/sobrerecursos.dart';
-import 'package:ecobudget_app/shopping/luz/shoppingenergiaeletrica.dart';
-import 'package:ecobudget_app/shopping/residuos_inorganicos/shoppinginorganicos.dart';
-import 'package:ecobudget_app/shopping/residuos_organicos/shoppingorganicos.dart';
+import 'package:ecobudget_app/shopping/luz/shoppingenergia.dart';
+import 'package:ecobudget_app/shopping/residuos_inorganicos/shoppingrinorganicos.dart';
+import 'package:ecobudget_app/shopping/residuos_organicos/shoppingrorganico.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
 import 'package:adobe_xd/page_link.dart';
-import 'agua/shoppinggua.dart';
+import 'agua/shoppingagua.dart';
 
-class SHOPPING extends StatelessWidget {
+class shopping extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class SHOPPING extends StatelessWidget {
                     children: [
                       IconButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return shoppinggua();
+                          return shoppingagua();
                         }));
                       },
                         icon: Image.asset('assets/images/economize_agua.png'),
@@ -53,7 +53,7 @@ class SHOPPING extends StatelessWidget {
                     children: [
                       IconButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return shoppingenergiaeletrica();
+                          return shoppingenergia();
                         }));
                       },
                         icon: Image.asset('assets/images/eco_light.png'),
@@ -76,7 +76,7 @@ class SHOPPING extends StatelessWidget {
                       IconButton(
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return shoppinginorganicos();
+                            return shoppingrinorganicos();
                           }));
                         },
                         icon: Image.asset('assets/images/garbage.png'),
@@ -96,7 +96,7 @@ class SHOPPING extends StatelessWidget {
                       IconButton(
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return shoppingorganicos();
+                            return shoppingorganico();
                           }));
                         },
                         icon: Image.asset("assets/images/ogcontornada.png"),
@@ -182,7 +182,7 @@ class SHOPPING extends StatelessWidget {
                           ),
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
-                              return ANLISEECONOMICA();
+                              return aemenu();
                             }));
                           },
                           child: const Text('Análise Econômica'),

@@ -1,12 +1,12 @@
 import 'package:ecobudget_app/restaurante/luz/restauranteenergia.dart';
-import 'package:ecobudget_app/restaurante/residuos_inorganicos/restauranterinorgnicos.dart';
+import 'package:ecobudget_app/restaurante/residuos_inorganicos/restauranterinorganicos.dart';
 import 'package:ecobudget_app/restaurante/residuos_organicos/restauranterorganicos.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'agua/restauranteagua.dart';
 import 'package:adobe_xd/page_link.dart';
 import '../infos/sobrerecursos.dart';
-import '../economica/ANLISEECONOMICA.dart';
+import '../economica/aemenu.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class restaurante extends StatelessWidget {
@@ -75,7 +75,7 @@ class restaurante extends StatelessWidget {
                       IconButton(
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return restauranterinorgnicos();
+                            return restauranterinorganicos();
                           }));
                         },
                         icon: Image.asset('assets/images/garbage.png'),
@@ -181,7 +181,7 @@ class restaurante extends StatelessWidget {
                           ),
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
-                              return ANLISEECONOMICA();
+                              return aemenu();
                             }));
                           },
                           child: const Text('Análise Econômica'),

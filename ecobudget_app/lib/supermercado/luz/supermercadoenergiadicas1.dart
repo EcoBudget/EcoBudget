@@ -1,11 +1,11 @@
 
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:ecobudget_app/shopping/luz/shoppingenergiadicas2.dart';
-import 'package:ecobudget_app/supermercado/luz/supermercado_energiadicas2.dart';
+import 'package:ecobudget_app/supermercado/luz/supermercadoenergiadicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class supermercado_energiadicas extends StatelessWidget {
+class supermercadoenergiadicas1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class supermercado_energiadicas extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return supermercado_energiadicas2();
+                return supermercadoenergiadicas2();
               }));
             },
             icon: Icon(Icons.arrow_forward),

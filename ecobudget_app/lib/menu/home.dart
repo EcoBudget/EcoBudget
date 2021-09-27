@@ -2,7 +2,7 @@ import 'package:ecobudget_app/escola/escola.dart';
 import 'package:ecobudget_app/models/menu/botaoverde.dart';
 import 'package:ecobudget_app/models/introducao/containerverde.dart';
 import 'package:ecobudget_app/restaurante/restaurante.dart';
-import 'package:ecobudget_app/shopping/SHOPPING.dart';
+import 'package:ecobudget_app/shopping/shopping.dart';
 import 'package:ecobudget_app/supermercado/supermercado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
@@ -32,7 +32,7 @@ class home extends StatelessWidget {
             SizedBox(height: 20,),
             botaoverde('\nESCOLA', 20, escola() ),
             SizedBox(height: 20,),
-            botaoverde('\nSHOPPING', 20, SHOPPING() ),
+            botaoverde('\nSHOPPING', 20, shopping() ),
             SizedBox(height: 20,),
             botaoverde('\nSUPERMERCADO', 20, supermercado() ),
 

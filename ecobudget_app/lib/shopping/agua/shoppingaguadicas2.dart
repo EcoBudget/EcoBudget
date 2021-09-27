@@ -4,7 +4,7 @@ import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class shoppingguadicas2 extends StatelessWidget {
+class shoppingaguadicas2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

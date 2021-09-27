@@ -1,9 +1,9 @@
-import 'package:ecobudget_app/economica/ANLISEECONOMICA.dart';
+import 'package:ecobudget_app/economica/aemenu.dart';
 import 'package:ecobudget_app/infos/sobrerecursos.dart';
 import 'package:ecobudget_app/supermercado/agua/supermercadoagua.dart';
 import 'package:ecobudget_app/supermercado/luz/supermercadoenergia.dart';
-import 'package:ecobudget_app/supermercado/residuos_inorganicos/supermercadoinorganicos.dart';
-import 'package:ecobudget_app/supermercado/residuos_organicos/supermercadoorganicos.dart';
+import 'package:ecobudget_app/supermercado/residuos_inorganicos/supermercadorinorganicos.dart';
+import 'package:ecobudget_app/supermercado/residuos_organicos/supermercadororganicos.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -75,7 +75,7 @@ class supermercado extends StatelessWidget {
                       IconButton(
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return supermercadoinorganicos();
+                            return supermercadorinorganicos();
                           }));
                         },
                         icon: Image.asset('assets/images/garbage.png'),
@@ -95,7 +95,7 @@ class supermercado extends StatelessWidget {
                       IconButton(
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return supermercadoorganicos();
+                            return supermercadororganicos();
                           }));
                         },
                         icon: Image.asset('assets/images/organic_food.png'),
@@ -181,7 +181,7 @@ class supermercado extends StatelessWidget {
                           ),
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
-                              return ANLISEECONOMICA();
+                              return aemenu();
                             }));
                           },
                           child: const Text('Análise Econômica'),

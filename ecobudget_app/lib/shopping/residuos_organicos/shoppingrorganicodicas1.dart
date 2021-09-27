@@ -1,10 +1,10 @@
 
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
-import 'package:ecobudget_app/shopping/residuos_organicos/shoppingorgnicodicas2.dart';
+import 'package:ecobudget_app/shopping/residuos_organicos/shoppingrorganicodicas2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class shoppingorgnicodicas1 extends StatelessWidget {
+class shoppingrorganicodicas1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class shoppingorgnicodicas1 extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return shoppingorgnicodicas2();
+                return shoppingrorganicodicas2();
               }));
             },
             icon: Icon(Icons.arrow_forward),
