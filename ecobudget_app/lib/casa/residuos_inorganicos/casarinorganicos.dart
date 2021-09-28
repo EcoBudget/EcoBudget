@@ -8,7 +8,7 @@ import '../../models/introducao/telaintroducao.dart';
 import '../casa.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class casarinorgnicos extends StatelessWidget {
+class casarinorganicos extends StatelessWidget {
   //casarinorgnicos({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
