@@ -1,13 +1,7 @@
 import 'package:ecobudget_app/models/introducao/telaintroducao.dart';
-import 'package:ecobudget_app/models/telas_genericas/textoformatado.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
-
-import 'package:ecobudget_app/supermercado/residuos_organicos/supermercadororganicosdicas2.dart';
 import 'package:ecobudget_app/supermercado/residuos_organicos/supermercadororganicosdicas1.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-import 'package:adobe_xd/page_link.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class supermercadororganicos extends StatelessWidget {
   @override

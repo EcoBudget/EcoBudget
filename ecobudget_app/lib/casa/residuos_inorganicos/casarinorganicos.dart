@@ -1,15 +1,11 @@
 import 'package:ecobudget_app/inorg%C3%A2nicos_gerais/geralrinorganicosdicas1.dart';
-import 'package:ecobudget_app/models/telas_genericas/textoformatado.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-import 'package:adobe_xd/page_link.dart';
+
 import '../../models/introducao/telaintroducao.dart';
-import '../casa.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class casarinorganicos extends StatelessWidget {
-  //casarinorgnicos({Key key,}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

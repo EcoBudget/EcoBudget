@@ -1,14 +1,10 @@
 import 'package:ecobudget_app/inorg%C3%A2nicos_gerais/geralrinorganicosdicas2.dart';
-import 'package:ecobudget_app/menu/home.dart';
 import 'package:ecobudget_app/models/telas_genericas/bordaamarela.dart';
 import 'package:ecobudget_app/models/telas_genericas/tituloformatado.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:adobe_xd/page_link.dart';
 
 class geralrinorganicosdicas1 extends StatelessWidget {
-  //geralrinorgnicosdicas1({Key key,}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,9 +84,3 @@ class geralrinorganicosdicas1 extends StatelessWidget {
   }
 }
 
-const String _svg_ru0g9a =
-    '<svg viewBox="0.0 0.0 16.0 16.0" ><path  d="M 8 0 L 6.545454978942871 1.454545497894287 L 12.05194854736328 6.961039066314697 L 0 6.961039066314697 L 0 9.038961410522461 L 12.05194854736328 9.038961410522461 L 6.545454978942871 14.54545497894287 L 8 16 L 16 8 L 8 0 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_ejirs =
-    '<svg viewBox="21.0 1137.0 309.0 121.2" ><path transform="translate(21.0, 1137.0)" d="M 49 0 L 260 0 C 287.0619506835938 0 309 19.84246444702148 309 44.31938934326172 L 309 76.88056945800781 C 309 101.3574905395508 287.0619506835938 121.199951171875 260 121.199951171875 L 49 121.199951171875 C 21.93804550170898 121.199951171875 0 101.3574905395508 0 76.88056945800781 L 0 44.31938934326172 C 0 19.84246444702148 21.93804550170898 0 49 0 Z" fill="#f9ffe7" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_ugetg3 =
-    '<svg viewBox="21.0 1285.1 317.4 126.9" ><path transform="translate(21.0, 1285.05)" d="M 51.28718185424805 1.103809154301416e-06 L 266.1127624511719 1.103809154301416e-06 C 294.4378356933594 1.103809154301416e-06 317.39990234375 28.41860389709473 317.39990234375 63.47473526000977 C 317.39990234375 98.53087615966797 294.4378356933594 126.9494705200195 266.1127624511719 126.9494705200195 L 51.28718185424805 126.9494705200195 C 22.96205139160156 126.9494705200195 0 98.53087615966797 0 63.47473526000977 C 0 28.41860389709473 22.96205139160156 1.103809154301416e-06 51.28718185424805 1.103809154301416e-06 Z" fill="#f9ffe7" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
