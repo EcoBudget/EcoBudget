@@ -1,5 +1,6 @@
 import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:ecobudget_app/models/introducao/telaintroducao.dart';
 import 'package:flutter/material.dart';
 
 import 'aeagua.dart';
@@ -10,12 +11,7 @@ class aemenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Análises Econômicas"),
-        leading: BackButton(onPressed: (){Navigator.pop(context);},),
-        backgroundColor: Color(0xff236068),
-      ),
+      appBar: appBar_introducao("Análises Econômicas",Icons.monetization_on_outlined),
       backgroundColor: const Color(0xffd7eaf9),
       body: Stack(
         children: <Widget>[
@@ -27,7 +23,6 @@ class aemenu extends StatelessWidget {
             Pin(size: 300.0, middle: 0.5346),
             Pin(size: 129.0, middle: 0.3326),
             child:
-                // Adobe XD layer: 'AGUA' (shape)
                 PageLink(
               links: [
                 PageLinkInfo(
@@ -44,10 +39,9 @@ class aemenu extends StatelessWidget {
                     image: const AssetImage('assets/images/agua_imagem.jpg'),
                     fit: BoxFit.cover,
                     colorFilter: new ColorFilter.mode(
-                        Colors.black.withOpacity(0.6), BlendMode.dstIn),
+                        Colors.black.withOpacity(0.7), BlendMode.dstIn),
                   ),
-                  border:
-                      Border.all(width: 1.0, color: const Color(0x99707070)),
+
                 ),
               ),
             ),
@@ -70,7 +64,7 @@ class aemenu extends StatelessWidget {
             Pin(size:300, middle: 0.5346),
             Pin(size: 129.0, middle: 0.705),
             child:
-                // Adobe XD layer: 'AGUA' (shape)
+
                 PageLink(
               links: [
                 PageLinkInfo(
@@ -87,10 +81,9 @@ class aemenu extends StatelessWidget {
                     image: const AssetImage('assets/images/energia_icone.jpg'),
                     fit: BoxFit.cover,
                     colorFilter: new ColorFilter.mode(
-                        Colors.black.withOpacity(0.6), BlendMode.dstIn),
+                        Colors.black.withOpacity(0.7), BlendMode.dstIn),
                   ),
-                  border:
-                      Border.all(width: 1.0, color: const Color(0x99707070)),
+
                 ),
               ),
             ),
